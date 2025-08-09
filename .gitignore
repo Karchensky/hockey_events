@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+
+# Project state and credentials
+credentials.json
+client_secret.json
+token.json
+# allow state.json while ignoring other data files
+data/
+!data/state.json
+
+# Playwright
+playwright/.cache/
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# Logs
+logs/
+*.log
