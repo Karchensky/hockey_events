@@ -42,6 +42,10 @@ def import_to_google() -> None:
     config = load_config()
     env = load_env()
 
+    if not env.google_refresh_token:
+        logger.warning("GOOGLE_REFRESH_TOKEN not set; skipping Google Calendar insertion. Feeds will still be built.")
+        return
+
     timezone = config.timezone or env.default_timezone
 
     events = collect_events(config.urls, timezone)
@@ -158,4 +162,6 @@ def build_team_feeds() -> None:
 
 
 if __name__ == "__main__":
+    # Always build feeds; insert to Google only if credentials are present
     import_to_google()
+    build_team_feeds()
