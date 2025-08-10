@@ -74,13 +74,10 @@ def build_team_feeds() -> None:
             unique_events = sorted(unique_map.values(), key=lambda e: e.start)
             ics_bytes = build_ics(unique_events, cal_name=team.name, tz_name=timezone)
 
-            # Preferred: team name + season slug; also write legacy id-based file
+            # Single filename: team name + season slug
             name_slug = slugify(team.name)
             preferred_filename = f"{name_slug}-{season_slug}.ics"
-            preferred_path = docs / preferred_filename
-            legacy_path = docs / f"{team.id}.ics"
-            preferred_path.write_bytes(ics_bytes)
-            legacy_path.write_bytes(ics_bytes)
+            (docs / preferred_filename).write_bytes(ics_bytes)
 
             team_links.append(f'<li><a href="ics/{preferred_filename}">{team.name}</a></li>')
         season_sections.append(f"<h2>{season.name}</h2>\n<ul>\n{chr(10).join(team_links)}\n</ul>")
