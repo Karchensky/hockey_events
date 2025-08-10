@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Hockey Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Audubon North
+X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. Ham Sub Club
+DTSTART:20250813T015000Z
+DTEND:20250813T030500Z
+DTSTAMP:20250810T012124Z
+UID:evt_4508836691a7b6f717dd5b941224804285aef5af
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10191173?subseason=945400
+LOCATION:Riverside - Finals G2
+URL:https://www.eriemetrosports.com/schedule/team_instance/10191173?subsea
+ son=945400
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. Ham Sub Club
+DTSTART:20250815T015000Z
+DTEND:20250815T030500Z
+DTSTAMP:20250810T012124Z
+UID:evt_7ccaf9e9065c42127525eb351f2889fd73852217
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10191173?subseason=945400
+LOCATION:Riverside Finals G3 If Need
+URL:https://www.eriemetrosports.com/schedule/team_instance/10191173?subsea
+ son=945400
+END:VEVENT
+END:VCALENDAR
