@@ -65,14 +65,14 @@ class ErieMetroScraper(Scraper):
             dt_text = f"{date_text} {time_candidate}".strip()
 
             try:
-                dt_naive = dateparser.parse(dt_text, fuzzy=True)
+                dt_naive = dateparser.parse(dt_text, fuzzy=True, ignoretz=True)
                 if dt_naive is None:
                     continue
                 start = localize(dt_naive, timezone)
             except Exception:
                 # Fallback: parse date only at 9:00 PM
                 try:
-                    date_only = dateparser.parse(date_text, fuzzy=True)
+                    date_only = dateparser.parse(date_text, fuzzy=True, ignoretz=True)
                     date_only = date_only.replace(hour=21, minute=0, second=0, microsecond=0)
                     start = localize(date_only, timezone)
                 except Exception:

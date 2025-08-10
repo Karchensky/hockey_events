@@ -7,4 +7,4 @@ if (-Not (Test-Path .venv)) {
 . .venv/Scripts/Activate.ps1
 pip install -r requirements.txt
 python -m playwright install
-python -m src.main
+python -c "from src.main import build_team_feeds; build_team_feeds()"

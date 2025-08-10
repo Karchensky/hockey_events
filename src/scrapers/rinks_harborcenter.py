@@ -23,7 +23,6 @@ class HarborcenterScraper(Scraper):
             context = browser.new_context()
             page = context.new_page()
             page.goto(url, wait_until="networkidle")
-            # Give SPA a moment to render
             page.wait_for_timeout(2000)
             html = page.content()
             context.close()
@@ -31,8 +30,6 @@ class HarborcenterScraper(Scraper):
 
         soup = BeautifulSoup(html, "html.parser")
 
-        # Try to locate rows in schedule tables or cards. As the site is SPA, selectors may vary.
-        # We'll search for elements containing a date and a time and an opponent.
         candidates = []
         for el in soup.find_all(["tr", "div", "li"]):
             text = el.get_text(" ", strip=True)
@@ -45,9 +42,8 @@ class HarborcenterScraper(Scraper):
         now_local = datetime.now(tz)
 
         for el, text in candidates:
-            # Attempt parse like: Tue Aug 12 9:50 PM vs Team @ Rink
             try:
-                dt = dateparser.parse(text, fuzzy=True)
+                dt = dateparser.parse(text, fuzzy=True, ignoretz=True)
             except Exception:
                 continue
             if not dt:
@@ -56,10 +52,8 @@ class HarborcenterScraper(Scraper):
             if start < now_local:
                 continue
 
-            # Summary heuristics
             summary = "Hockey Game"
             location = None
-            # Look for '@ Rink' or 'Rink' near the end
             words = text.split()
             if "Rink" in words:
                 idx = words.index("Rink")

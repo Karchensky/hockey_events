@@ -1,4 +1,4 @@
-name: Scrape and Import Hockey Events
+name: Build Hockey ICS Feeds
 
 on:
   schedule:
@@ -23,31 +23,14 @@ jobs:
           pip install -r requirements.txt
           python -m playwright install --with-deps
 
-      - name: Create .env
-        run: |
-          echo "GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}" >> .env
-          echo "GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }}" >> .env
-          echo "GOOGLE_REFRESH_TOKEN=${{ secrets.GOOGLE_REFRESH_TOKEN }}" >> .env
-          echo "GOOGLE_DEFAULT_CALENDAR_ID=${{ secrets.GOOGLE_DEFAULT_CALENDAR_ID }}" >> .env
-          echo "SMTP_SERVER=${{ secrets.SMTP_SERVER }}" >> .env
-          echo "SMTP_PORT=${{ secrets.SMTP_PORT }}" >> .env
-          echo "SMTP_USERNAME=${{ secrets.SMTP_USERNAME }}" >> .env
-          echo "SMTP_PASSWORD=${{ secrets.SMTP_PASSWORD }}" >> .env
-          echo "SMTP_FROM=${{ secrets.SMTP_FROM }}" >> .env
-          echo "SMTP_USE_TLS=${{ secrets.SMTP_USE_TLS }}" >> .env
-
-      - name: Import to Google Calendar
-        run: |
-          python -c "from src.main import import_to_google; import_to_google()"
-
       - name: Build ICS feeds
         run: |
           python -c "from src.main import build_team_feeds; build_team_feeds()"
 
-      - name: Commit updated state and docs
+      - name: Commit updated docs
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add data/state.json docs/ || true
-          git commit -m "Update state and docs [skip ci]" || echo "No changes"
+          git add docs/ || true
+          git commit -m "Update ICS feeds [skip ci]" || echo "No changes"
           git push

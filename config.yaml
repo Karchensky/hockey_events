@@ -1,7 +1,4 @@
 timezone: America/New_York
-urls:
-  - https://www.rinksatharborcenter.com/stats#/1367/team/549836/schedule
-  - https://www.eriemetrosports.com/schedule/team_instance/10191173?subseason=945400
 
 teams:
   - id: audubon-north
@@ -12,14 +9,3 @@ teams:
     name: Harborcenter Team 549836
     urls:
       - https://www.rinksatharborcenter.com/stats#/1367/team/549836/schedule
-
-# Recipients can be email (added as attendee) or calendar_id (insert into that calendar)
-recipients:
-  - name: Example Recipient
-    email: example@example.com
-  - name: Shared Team Calendar
-    calendar_id: your_calendar_id@group.calendar.google.com
-
-notify:
-  summary_to:
-    - admin@example.com

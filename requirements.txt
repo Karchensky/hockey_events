@@ -7,7 +7,4 @@ playwright==1.45.0
 loguru==0.7.2
 pydantic==2.7.4
 PyYAML==6.0.2
-google-api-python-client==2.133.0
-google-auth==2.31.0
-google-auth-oauthlib==1.2.1
 python-dateutil==2.9.0.post0
