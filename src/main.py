@@ -5,6 +5,7 @@ from typing import List
 from loguru import logger
 
 from datetime import datetime
+import re
 import pytz
 
 from src.config import load_config
@@ -12,6 +13,14 @@ from src.scrapers.erie_metro import ErieMetroScraper
 from src.scrapers.rinks_harborcenter import HarborcenterScraper
 from src.utils.events import Event
 from src.utils.ics import build_ics
+
+
+def slugify(name: str) -> str:
+    slug = name.strip().lower()
+    slug = re.sub(r"[^a-z0-9\s\-]", "", slug)
+    slug = re.sub(r"\s+", "-", slug)
+    slug = re.sub(r"-+", "-", slug)
+    return slug or "calendar"
 
 
 def collect_events(urls: List[str], timezone: str, team_name: str | None = None) -> List[Event]:
@@ -51,8 +60,12 @@ def build_team_feeds() -> None:
 
     sorted_seasons = sorted(config.seasons, key=season_sort_key, reverse=True)
 
-    # Build ICS files
+    # Track link targets for index (name+season slugs)
+    season_sections: List[str] = []
+
     for season in sorted_seasons:
+        season_slug = slugify(season.name)
+        team_links = []
         for team in season.teams:
             events: List[Event] = collect_events(team.urls, timezone, team_name=team.name)
             events = [e for e in events if e.start >= now]
@@ -60,15 +73,17 @@ def build_team_feeds() -> None:
             unique_map = {e.google_event_id(): e for e in events}
             unique_events = sorted(unique_map.values(), key=lambda e: e.start)
             ics_bytes = build_ics(unique_events, cal_name=team.name, tz_name=timezone)
-            (docs / f"{team.id}.ics").write_bytes(ics_bytes)
 
-    # Render index grouped by season
-    sections: List[str] = []
-    for season in sorted_seasons:
-        team_links = "\n".join(
-            f'<li><a href="ics/{team.id}.ics">{team.name}</a></li>' for team in season.teams
-        )
-        sections.append(f"<h2>{season.name}</h2>\n<ul>\n{team_links}\n</ul>")
+            # Preferred: team name + season slug; also write legacy id-based file
+            name_slug = slugify(team.name)
+            preferred_filename = f"{name_slug}-{season_slug}.ics"
+            preferred_path = docs / preferred_filename
+            legacy_path = docs / f"{team.id}.ics"
+            preferred_path.write_bytes(ics_bytes)
+            legacy_path.write_bytes(ics_bytes)
+
+            team_links.append(f'<li><a href="ics/{preferred_filename}">{team.name}</a></li>')
+        season_sections.append(f"<h2>{season.name}</h2>\n<ul>\n{chr(10).join(team_links)}\n</ul>")
 
     index = Path("docs/index.html")
     index.write_text(
@@ -89,7 +104,7 @@ def build_team_feeds() -> None:
 </head>
 <body>
   <h1>Team Calendar Subscriptions</h1>
-  {''.join(sections)}
+  {''.join(season_sections)}
 
   <h2>Subscribe</h2>
   <p><strong>Apple (iPhone/iPad):</strong> Tap a team link above and choose Subscribe. Or go to Settings → Calendar → Accounts → Add Subscribed Calendar and paste the URL.</p>
