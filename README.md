@@ -1,52 +1,42 @@
-# Hockey Events ICS Feeds
+# Sportsengine/Harborcenter Calendar Feed
 
-Builds per-team ICS calendars from real-world league sites and hosts them (via GitHub Pages) so users can subscribe by URL. Only future events are included.
+ICS feed that updates daily & refreshes your personal calendar with the team schedule. Works with Google Calendar, Apple Calendar, and Outlook... in theory.
 
-## Features
-- Per-team ICS feeds (Google/Apple/Outlook compatible)
-- Future-only events
-- Daily automation via GitHub Actions
-- Pluggable scrapers (Erie Metro, Harborcenter SPA via Playwright)
+## Subscribe
 
-## Setup
-1. Edit `config.yaml` with your teams:
+1) Open the subscription page:
+   - `https://karchensky.github.io/hockey_events/`
+2) Click your team’s link to subscribe (the link ends with `.ics`).
+3) Follow your calendar app’s prompt:
+   - Google Calendar (web): Other calendars → From URL → paste the `.ics` link → Add calendar
+   - Apple Calendar (Mac): File → New Calendar Subscription → paste the `.ics` link → Subscribe
+   - Outlook: Add calendar → Subscribe from web → paste the `.ics` link → Import
 
-```
-timezone: America/New_York
-teams:
-  - id: audubon-north
-    name: Audubon North
-    urls:
-      - https://www.eriemetrosports.com/schedule/team_instance/10191173?subseason=945400
-  - id: harborcenter-549836
-    name: Harborcenter Team 549836
-    urls:
-      - https://www.rinksatharborcenter.com/stats#/1367/team/549836/schedule
-```
+Tip: You can also copy the `.ics` link and add it directly in your calendar app’s “Subscribe by URL” option.
 
-2. Install dependencies and build locally (optional preview):
+## Unsubscribe
 
-```
-python -m venv .venv && .venv/Scripts/activate  # Windows PowerShell
-pip install -r requirements.txt
-playwright install --with-deps
-python -c "from src.main import build_team_feeds; build_team_feeds()"
-```
+- Remove the subscribed calendar from your app:
+  - Google Calendar (web): Settings → select the subscribed calendar → Remove calendar → Unsubscribe
+  - Apple Calendar: Right‑click the subscribed calendar → Unsubscribe
+  - Outlook: Right‑click the subscribed calendar → Remove
 
-3. Enable GitHub Pages
-- Settings → Pages → Source: `main` branch, folder `/docs`
+## Update cadence and timing
 
-4. Share subscription links
-- Index: `https://<your-username>.github.io/<repo>/`
-- Team ICS links:
-  - `https://<your-username>.github.io/<repo>/ics/audubon-north.ics`
-  - `https://<your-username>.github.io/<repo>/ics/harborcenter-549836.ics`
+- Each team’s feed is updated once daily.
+- Your calendar app periodically fetches updates:
+  - Google Calendar typically refreshes subscribed calendars every few hours (can be up to 24h).
+  - Apple Calendar lets you choose the refresh interval when subscribing.
+  - Outlook refresh frequency varies by version and service.
+- Because refresh is controlled by your calendar provider, updates may not appear immediately.
 
-## How users subscribe/unsubscribe
-- Google Calendar (web): Other calendars → From URL → paste the `.ics` link → Add calendar. Remove to unsubscribe.
-- Apple Calendar: File → New Calendar Subscription → paste link. Remove to unsubscribe.
-- Outlook: Add calendar → Subscribe from web → paste link. Remove to unsubscribe.
+## Timezone
 
-## Automation
-- GitHub Actions workflow builds feeds daily and commits `docs/`.
-- When new season URLs appear, update `config.yaml` and the next run refreshes feeds automatically.
+- All events are localized to the timezone listed on the subscription page (default: America/New_York).
+
+## Troubleshooting
+
+- If you don’t see events right away, the provider may not have refreshed yet. Check again later.
+- Confirm you added the `.ics` URL as a “subscribed” calendar, not imported once.
+- If a team’s schedule URL changes between seasons, we’ll update the feed; your subscription remains valid and will refresh automatically after the next daily update.
+- Contact Bryan Karchensky

@@ -1,1 +1,0 @@
-This directory contains verification and test scripts for scraping and parsing, per project convention.
