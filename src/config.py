@@ -1,7 +1,8 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import List
+from typing import List, Optional
+from datetime import date
 
 import yaml
 from pydantic import BaseModel, Field
@@ -13,9 +14,17 @@ class Team(BaseModel):
     urls: List[str]
 
 
+class Season(BaseModel):
+    id: str
+    name: str
+    # Optional start date used for sorting seasons (most recent first)
+    start: Optional[date] = None
+    teams: List[Team] = Field(default_factory=list)
+
+
 class AppConfig(BaseModel):
     timezone: str = "America/New_York"
-    teams: List[Team] = Field(default_factory=list)
+    seasons: List[Season] = Field(default_factory=list)
 
 
 def load_config(config_path: Path = Path("config.yaml")) -> AppConfig:

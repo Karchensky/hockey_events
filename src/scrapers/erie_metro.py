@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from datetime import datetime
-from typing import List
+from typing import List, Optional
 
 import requests
 from bs4 import BeautifulSoup
@@ -13,6 +13,9 @@ from src.utils.events import Event, guess_end, localize
 
 
 class ErieMetroScraper(Scraper):
+    def __init__(self, team_name: Optional[str] = None) -> None:
+        self.team_name = team_name
+
     def can_handle(self, url: str) -> bool:
         return "eriemetrosports.com" in url
 
@@ -23,7 +26,6 @@ class ErieMetroScraper(Scraper):
 
         events: List[Event] = []
 
-        # The schedule is in a table with rows containing Date | Result/Time | Opponent | Location | Status
         table = soup.find("table")
         if not table:
             return events
@@ -33,7 +35,7 @@ class ErieMetroScraper(Scraper):
         now_local = datetime.now(tz)
 
         headers = [th.get_text(strip=True).lower() for th in rows[0].find_all(["th", "td"])] if rows else []
-        # Attempt to find column indices
+
         def col_index(name: str) -> int:
             for i, h in enumerate(headers):
                 if name in h:
@@ -55,13 +57,11 @@ class ErieMetroScraper(Scraper):
             except Exception:
                 continue
 
-            # Identify scheduled (future) entries. Status cell often contains time like '9:50 PM EDT'
             status_text = cells[status_idx] if status_idx >= 0 else ""
             if "final" in status_text.lower():
-                # Skip completed games
                 continue
 
-            time_candidate = status_text or cells[1] if len(cells) > 1 else ""
+            time_candidate = status_text or (cells[1] if len(cells) > 1 else "")
             dt_text = f"{date_text} {time_candidate}".strip()
 
             try:
@@ -70,7 +70,6 @@ class ErieMetroScraper(Scraper):
                     continue
                 start = localize(dt_naive, timezone)
             except Exception:
-                # Fallback: parse date only at 9:00 PM
                 try:
                     date_only = dateparser.parse(date_text, fuzzy=True, ignoretz=True)
                     date_only = date_only.replace(hour=21, minute=0, second=0, microsecond=0)
@@ -79,12 +78,19 @@ class ErieMetroScraper(Scraper):
                     continue
 
             if start < now_local:
-                # Skip past
                 continue
 
-            opponent = cells[opponent_idx] if opponent_idx >= 0 else "Opponent"
+            opponent_cell = cells[opponent_idx] if opponent_idx >= 0 else "Opponent"
+            # Opponent cell often like '@ Ham Sub Club' or 'Realty Group'
+            opponent = opponent_cell.replace("@", "").strip()
+            # Compose summary with team name if available
+            if self.team_name:
+                summary = f"{self.team_name} vs. {opponent}"
+            else:
+                # Fallback: include generic label
+                summary = f"Hockey: {opponent_cell}"
+
             location = cells[location_idx] if location_idx >= 0 else None
-            summary = f"Hockey: {opponent}"
 
             end = guess_end(start)
             events.append(

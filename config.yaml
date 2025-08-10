@@ -1,11 +1,15 @@
 timezone: America/New_York
 
-teams:
-  - id: audubon-north
-    name: Audubon North - Summer 2025
-    urls:
-      - https://www.eriemetrosports.com/schedule/team_instance/10191173?subseason=945400
-  - id: harborcenter-549836
-    name: Golden Retrievers - Summer 2025
-    urls:
-      - https://www.rinksatharborcenter.com/stats#/1367/team/549836/schedule
+seasons:
+  - id: summer-2025
+    name: Summer 2025
+    start: 2025-06-01
+    teams:
+      - id: audubon-north
+        name: Audubon North
+        urls:
+          - https://www.eriemetrosports.com/schedule/team_instance/10191173?subseason=945400
+      - id: harborcenter-549836
+        name: Golden Retrievers
+        urls:
+          - https://www.rinksatharborcenter.com/stats#/1367/team/549836/schedule

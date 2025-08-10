@@ -2,6 +2,7 @@ from __future__ import annotations
 
 from datetime import datetime
 from typing import List
+import re
 
 import pytz
 from bs4 import BeautifulSoup
@@ -10,6 +11,13 @@ from dateutil import parser as dateparser
 
 from src.scrapers.base import Scraper
 from src.utils.events import Event, guess_end, localize
+
+
+TEAM_VS_REGEX = re.compile(
+    r"([A-Za-z0-9 .\'&\-]+?)\s+vs\.?\s+([A-Za-z0-9 .\'&\-]+?)(?=\s+(?:on\b|@|\-|,|\d|$))",
+    re.IGNORECASE,
+)
+RINK_REGEX = re.compile(r"Rink\s*([0-9]+)", re.IGNORECASE)
 
 
 class HarborcenterScraper(Scraper):
@@ -23,41 +31,69 @@ class HarborcenterScraper(Scraper):
             context = browser.new_context()
             page = context.new_page()
             page.goto(url, wait_until="networkidle")
-            page.wait_for_timeout(2000)
+            page.wait_for_timeout(2500)
             html = page.content()
             context.close()
             browser.close()
 
         soup = BeautifulSoup(html, "html.parser")
 
-        candidates = []
-        for el in soup.find_all(["tr", "div", "li"]):
-            text = el.get_text(" ", strip=True)
-            if not text or len(text) < 10:
-                continue
-            if any(k in text.lower() for k in ["am", "pm"]):
-                candidates.append((el, text))
+        nodes = soup.find_all(["div", "li", "tr", "p", "span"])
+        texts = [n.get_text(" ", strip=True) for n in nodes]
+        texts = [t for t in texts if t and len(t) > 5]
 
         tz = pytz.timezone(timezone)
         now_local = datetime.now(tz)
 
-        for el, text in candidates:
-            try:
-                dt = dateparser.parse(text, fuzzy=True, ignoretz=True)
-            except Exception:
-                continue
-            if not dt:
-                continue
-            start = localize(dt, timezone)
-            if start < now_local:
+        i = 0
+        while i < len(texts):
+            text = texts[i]
+            if "vs" not in text.lower():
+                i += 1
                 continue
 
-            summary = "Hockey Game"
-            location = None
-            words = text.split()
-            if "Rink" in words:
-                idx = words.index("Rink")
-                location = " ".join(words[max(0, idx - 2): idx + 1])
+            m = TEAM_VS_REGEX.search(text)
+            if not m:
+                combined = " ".join(texts[i:i+2])
+                m = TEAM_VS_REGEX.search(combined)
+                if not m:
+                    i += 1
+                    continue
+
+            team_a = m.group(1).strip()
+            team_b = m.group(2).strip()
+            summary = f"{team_a} vs. {team_b}"
+
+            context_text = " ".join(texts[i:i+4])
+            dt = None
+            try:
+                dt = dateparser.parse(context_text, fuzzy=True, ignoretz=True)
+            except Exception:
+                try:
+                    prev_context = " ".join(texts[max(0, i-1):i+3])
+                    dt = dateparser.parse(prev_context, fuzzy=True, ignoretz=True)
+                except Exception:
+                    dt = None
+
+            if not dt:
+                i += 1
+                continue
+
+            start = localize(dt, timezone)
+            if start < now_local:
+                i += 1
+                continue
+
+            rink_label = None
+            rink_match = RINK_REGEX.search(context_text)
+            if not rink_match and i + 1 < len(texts):
+                rink_match = RINK_REGEX.search(texts[i+1])
+            if rink_match:
+                rink_label = f"Rink {rink_match.group(1)}"
+
+            location = "LECOM Harborcenter"
+            if rink_label:
+                location = f"{location} - {rink_label}"
 
             events.append(
                 Event(
@@ -70,5 +106,7 @@ class HarborcenterScraper(Scraper):
                     source_url=url,
                 )
             )
+
+            i += 2  # advance to reduce duplicate matching across adjacent nodes
 
         return events
