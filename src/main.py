@@ -58,14 +58,34 @@ def build_team_feeds() -> None:
     index.write_text(
         f"""
 <!DOCTYPE html>
-<html>
-<head><meta charset=\"utf-8\"><title>Hockey Feeds</title></head>
+<html lang=\"en\">
+<head>
+  <meta charset=\"utf-8\" />
+  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
+  <title>Team Calendar Subscriptions</title>
+  <style>
+    body {{ font-family: 'Borda', 'Borda Regular', sans-serif; line-height: 1.5; margin: 24px; }}
+    h1 {{ margin-bottom: 8px; }}
+    h2 {{ margin-top: 24px; }}
+    ul {{ padding-left: 20px; }}
+    code {{ background: #f4f4f4; padding: 2px 4px; border-radius: 4px; }}
+  </style>
+</head>
 <body>
-  <h1>Hockey Team Subscriptions</h1>
+  <h1>Team Calendar Subscriptions</h1>
   <ul>
     {links}
   </ul>
-  <p>Click a link above to subscribe in your calendar app.</p>
+
+  <h2>Subscribe</h2>
+  <p><strong>Apple (iPhone/iPad):</strong> Tap a team link above and choose Subscribe. Or go to Settings → Calendar → Accounts → Add Subscribed Calendar and paste the URL.</p>
+  <p><strong>Android (Google Calendar):</strong> Use Google Calendar on the web: Other calendars → From URL → paste the team URL → Add. Then ensure it’s visible and set to Sync in the app. Tapping the link on Android typically downloads a file (one-time import) and won’t auto-update.</p>
+
+  <h2>Unsubscribe</h2>
+  <p><strong>Apple:</strong> Remove the subscribed calendar in Calendar settings.</p>
+  <p><strong>Android (Google Calendar):</strong> On the web, open Settings, select the subscribed calendar, and Remove/Unsubscribe. It will disappear from the app.</p>
+  <h2>Contact</h2>
+  <p>Bryan Karchensky</p>
 </body>
 </html>
 """.strip(),

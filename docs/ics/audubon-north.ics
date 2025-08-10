@@ -1,10 +1,15 @@
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Hockey Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Audubon North - Summer 2025
+X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
 SUMMARY:Hockey: @ Ham Sub Club
-DTSTART;TZID=America/New_York:20250812T215000
-DTEND;TZID=America/New_York:20250812T230500
+DTSTART:20250813T015000Z
+DTEND:20250813T030500Z
+DTSTAMP:20250810T004359Z
 UID:evt_bea44fbb1feb9203a26727dc290901f656e120aa
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10191173?subseason=945400
@@ -14,8 +19,9 @@ URL:https://www.eriemetrosports.com/schedule/team_instance/10191173?subsea
 END:VEVENT
 BEGIN:VEVENT
 SUMMARY:Hockey: Ham Sub Club
-DTSTART;TZID=America/New_York:20250814T215000
-DTEND;TZID=America/New_York:20250814T230500
+DTSTART:20250815T015000Z
+DTEND:20250815T030500Z
+DTSTAMP:20250810T004359Z
 UID:evt_9aafc2996e1cd631069385b603078b4c90c1bb3e
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10191173?subseason=945400
