@@ -48,7 +48,7 @@ def build_team_feeds() -> None:
     for team in config.teams:
         events: List[Event] = collect_events(team.urls, timezone)
         events = [e for e in events if e.start >= now]
-        ics_bytes = build_ics(events)
+        ics_bytes = build_ics(events, cal_name=team.name, tz_name=timezone)
         (docs / f"{team.id}.ics").write_bytes(ics_bytes)
 
     index = Path("docs/index.html")

@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Preserve CRLF for ICS files for maximum client compatibility
+*.ics text eol=crlf
