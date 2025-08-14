@@ -6,21 +6,10 @@ METHOD:PUBLISH
 X-WR-CALNAME:Golden Retrievers
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
-SUMMARY:Golden Retrievers vs. Homewreckers
-DTSTART:20250813T232000Z
-DTEND:20250814T003500Z
-DTSTAMP:20250813T104206Z
-UID:evt_a8365b13b46d7c0473274e58cb62b30d928b0136
-DESCRIPTION:Auto-imported from https://www.rinksatharborcenter.com/stats#/
- 1367/team/549836/schedule
-LOCATION:LECOM Harborcenter
-URL:https://www.rinksatharborcenter.com/stats#/1367/team/549836/schedule
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Golden Retrievers vs. Tioga Tavern
 DTSTART:20250819T014000Z
 DTEND:20250819T025500Z
-DTSTAMP:20250813T104206Z
+DTSTAMP:20250814T104312Z
 UID:evt_5fe9350bbd8cb0135b16124ce856be5e952c86e0
 DESCRIPTION:Auto-imported from https://www.rinksatharborcenter.com/stats#/
  1367/team/549836/schedule
