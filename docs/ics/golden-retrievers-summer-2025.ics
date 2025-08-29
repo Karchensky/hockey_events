@@ -5,15 +5,4 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Golden Retrievers
 X-WR-TIMEZONE:America/New_York
-BEGIN:VEVENT
-SUMMARY:Golden Retrievers vs. Imperial Pizza
-DTSTART:20250829T003000Z
-DTEND:20250829T014500Z
-DTSTAMP:20250828T103833Z
-UID:evt_b38242905f2ffe76c1cacce20fe6b284380f1a47
-DESCRIPTION:Auto-imported from https://www.rinksatharborcenter.com/stats#/
- 1367/team/549836/schedule
-LOCATION:LECOM Harborcenter
-URL:https://www.rinksatharborcenter.com/stats#/1367/team/549836/schedule
-END:VEVENT
 END:VCALENDAR
