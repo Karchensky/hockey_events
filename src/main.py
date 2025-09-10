@@ -64,32 +64,30 @@ def build_team_feeds() -> None:
     season_sections: List[str] = []
 
     for season in sorted_seasons:
-        # Skip inactive seasons
-        if not season.active:
-            continue
-            
         season_slug = slugify(season.name)
         team_links = []
-        for team in season.teams:
-            # Skip inactive teams
-            if not team.active:
-                continue
-                
-            events: List[Event] = collect_events(team.urls, timezone, team_name=team.name)
-            events = [e for e in events if e.start >= now]
-            # dedupe
-            unique_map = {e.google_event_id(): e for e in events}
-            unique_events = sorted(unique_map.values(), key=lambda e: e.start)
-            ics_bytes = build_ics(unique_events, cal_name=team.name, tz_name=timezone)
-
-            # Single filename: team name + season slug
-            name_slug = slugify(team.name)
-            preferred_filename = f"{name_slug}-{season_slug}.ics"
-            (docs / preferred_filename).write_bytes(ics_bytes)
-
-            team_links.append(f'<li><a href="ics/{preferred_filename}">{team.name}</a></li>')
         
-        # Only add season section if there are active teams
+        for team in season.teams:
+            # Always show team in index, but only generate ICS for active teams
+            if team.active and season.active:
+                events: List[Event] = collect_events(team.urls, timezone, team_name=team.name)
+                events = [e for e in events if e.start >= now]
+                # dedupe
+                unique_map = {e.google_event_id(): e for e in events}
+                unique_events = sorted(unique_map.values(), key=lambda e: e.start)
+                ics_bytes = build_ics(unique_events, cal_name=team.name, tz_name=timezone)
+
+                # Single filename: team name + season slug
+                name_slug = slugify(team.name)
+                preferred_filename = f"{name_slug}-{season_slug}.ics"
+                (docs / preferred_filename).write_bytes(ics_bytes)
+
+                team_links.append(f'<li><a href="ics/{preferred_filename}">{team.name}</a></li>')
+            else:
+                # Show team but without link (inactive)
+                team_links.append(f'<li>{team.name} <em>(inactive)</em></li>')
+        
+        # Always add season section if there are teams
         if team_links:
             season_sections.append(f"<h2>{season.name}</h2>\n<ul>\n{chr(10).join(team_links)}\n</ul>")
 
