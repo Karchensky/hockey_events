@@ -12,6 +12,7 @@ class Team(BaseModel):
     id: str
     name: str
     urls: List[str]
+    active: bool = True
 
 
 class Season(BaseModel):
@@ -19,6 +20,7 @@ class Season(BaseModel):
     name: str
     # Optional start date used for sorting seasons (most recent first)
     start: Optional[date] = None
+    active: bool = True
     teams: List[Team] = Field(default_factory=list)
 
 

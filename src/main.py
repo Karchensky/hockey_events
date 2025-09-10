@@ -64,9 +64,17 @@ def build_team_feeds() -> None:
     season_sections: List[str] = []
 
     for season in sorted_seasons:
+        # Skip inactive seasons
+        if not season.active:
+            continue
+            
         season_slug = slugify(season.name)
         team_links = []
         for team in season.teams:
+            # Skip inactive teams
+            if not team.active:
+                continue
+                
             events: List[Event] = collect_events(team.urls, timezone, team_name=team.name)
             events = [e for e in events if e.start >= now]
             # dedupe
@@ -80,7 +88,10 @@ def build_team_feeds() -> None:
             (docs / preferred_filename).write_bytes(ics_bytes)
 
             team_links.append(f'<li><a href="ics/{preferred_filename}">{team.name}</a></li>')
-        season_sections.append(f"<h2>{season.name}</h2>\n<ul>\n{chr(10).join(team_links)}\n</ul>")
+        
+        # Only add season section if there are active teams
+        if team_links:
+            season_sections.append(f"<h2>{season.name}</h2>\n<ul>\n{chr(10).join(team_links)}\n</ul>")
 
     index = Path("docs/index.html")
     index.write_text(

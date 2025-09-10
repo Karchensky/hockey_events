@@ -1,9 +1,23 @@
 timezone: America/New_York
 
 seasons:
+  - id: fall-winter-2025-26
+    name: Fall/Winter 2025/26
+    start: 2025-09-01
+    active: true
+    teams:
+      - id: audubon-north-fw-2025-26
+        name: Audubon North
+        urls:
+          - https://www.eriemetrosports.com/schedule/team_instance/10300893?subseason=952202
+      - id: 716-realty-group-fw-2025-26
+        name: 716 Realty Group
+        urls:
+          - https://www.eriemetrosports.com/schedule/team_instance/10300900?subseason=952202
   - id: summer-2025
     name: Summer 2025
     start: 2025-06-01
+    active: false
     teams:
       - id: audubon-north
         name: Audubon North
