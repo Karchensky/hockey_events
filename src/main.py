@@ -68,24 +68,21 @@ def build_team_feeds() -> None:
         team_links = []
         
         for team in season.teams:
-            # Always show team in index, but only generate ICS for active teams
+            # Always show team in index with link, but only update ICS for active teams
+            name_slug = slugify(team.name)
+            preferred_filename = f"{name_slug}-{season_slug}.ics"
+            
             if team.active and season.active:
+                # Generate fresh ICS for active teams
                 events: List[Event] = collect_events(team.urls, timezone, team_name=team.name)
                 events = [e for e in events if e.start >= now]
                 # dedupe
                 unique_map = {e.google_event_id(): e for e in events}
                 unique_events = sorted(unique_map.values(), key=lambda e: e.start)
                 ics_bytes = build_ics(unique_events, cal_name=team.name, tz_name=timezone)
-
-                # Single filename: team name + season slug
-                name_slug = slugify(team.name)
-                preferred_filename = f"{name_slug}-{season_slug}.ics"
                 (docs / preferred_filename).write_bytes(ics_bytes)
 
-                team_links.append(f'<li><a href="ics/{preferred_filename}">{team.name}</a></li>')
-            else:
-                # Show team but without link (inactive)
-                team_links.append(f'<li>{team.name} <em>(inactive)</em></li>')
+            team_links.append(f'<li><a href="ics/{preferred_filename}">{team.name}</a></li>')
         
         # Always add season section if there are teams
         if team_links:
