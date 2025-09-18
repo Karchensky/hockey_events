@@ -6,22 +6,10 @@ METHOD:PUBLISH
 X-WR-CALNAME:Audubon North
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. Hammers (0-0)
-DTSTART:20250918T012000Z
-DTEND:20250918T023500Z
-DTSTAMP:20250917T103645Z
-UID:evt_105c94d6f3393b98f039b75a1dc2c1bfa98fbc25
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
-LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Audubon North vs. Visualeyes (0-0)
 DTSTART:20250925T012000Z
 DTEND:20250925T023500Z
-DTSTAMP:20250917T103645Z
+DTSTAMP:20250918T103642Z
 UID:evt_ad486942f38143c9f66943081a7dab1e2710260f
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202
