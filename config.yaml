@@ -6,6 +6,10 @@ seasons:
     start: 2025-09-01
     active: true
     teams:
+      - id: golden-retrievers-fw-2025-26
+        name: Golden Retrievers
+        urls:
+          - https://www.rinksatharborcenter.com/stats#/1367/team/589011/schedule
       - id: audubon-north-fw-2025-26
         name: Audubon North
         urls:

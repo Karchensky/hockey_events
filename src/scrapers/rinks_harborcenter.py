@@ -62,18 +62,40 @@ class HarborcenterScraper(Scraper):
 
             team_a = m.group(1).strip()
             team_b = m.group(2).strip()
+            
+            # Filter out malformed matches (table headers, etc.)
+            if team_a.lower() in ['away', 'home', 'division', 'score', 'date', 'time', 'actions', 'rink']:
+                i += 1
+                continue
+            if team_b.lower() in ['away', 'home', 'division', 'score', 'date', 'time', 'actions', 'rink']:
+                i += 1
+                continue
+                
             summary = f"{team_a} vs. {team_b}"
 
-            context_text = " ".join(texts[i:i+4])
+            # Try to extract date from the current text first
             dt = None
             try:
-                dt = dateparser.parse(context_text, fuzzy=True, ignoretz=True)
+                dt = dateparser.parse(text, fuzzy=True, ignoretz=True)
             except Exception:
+                # If that fails, try extracting just the date/time part
                 try:
-                    prev_context = " ".join(texts[max(0, i-1):i+3])
-                    dt = dateparser.parse(prev_context, fuzzy=True, ignoretz=True)
+                    # Look for patterns like "on MM/DD/YY HH:MM AM/PM"
+                    date_match = re.search(r'on\s+(\d+/\d+/\d+\s+\d+:\d+\s*[AP]M)', text, re.IGNORECASE)
+                    if date_match:
+                        date_text = date_match.group(1)
+                        dt = dateparser.parse(date_text, fuzzy=True, ignoretz=True)
                 except Exception:
-                    dt = None
+                    # If that fails, try with a smaller context window
+                    try:
+                        context_text = " ".join(texts[i:i+2])
+                        dt = dateparser.parse(context_text, fuzzy=True, ignoretz=True)
+                    except Exception:
+                        try:
+                            prev_context = " ".join(texts[max(0, i-1):i+2])
+                            dt = dateparser.parse(prev_context, fuzzy=True, ignoretz=True)
+                        except Exception:
+                            dt = None
 
             if not dt:
                 i += 1
@@ -85,7 +107,7 @@ class HarborcenterScraper(Scraper):
                 continue
 
             rink_label = None
-            rink_match = RINK_REGEX.search(context_text)
+            rink_match = RINK_REGEX.search(text)
             if not rink_match and i + 1 < len(texts):
                 rink_match = RINK_REGEX.search(texts[i+1])
             if rink_match:
@@ -107,6 +129,6 @@ class HarborcenterScraper(Scraper):
                 )
             )
 
-            i += 2  # advance to reduce duplicate matching across adjacent nodes
+            i += 1  # advance to next node to avoid infinite loops
 
         return events

@@ -76,8 +76,21 @@ def build_team_feeds() -> None:
                 # Generate fresh ICS for active teams
                 events: List[Event] = collect_events(team.urls, timezone, team_name=team.name)
                 events = [e for e in events if e.start >= now]
-                # dedupe
-                unique_map = {e.google_event_id(): e for e in events}
+                # dedupe - normalize location for better deduplication
+                unique_map = {}
+                for e in events:
+                    # Create a normalized version for deduplication
+                    normalized_location = ""
+                    if e.location:
+                        # Normalize Harborcenter locations to be consistent
+                        if "LECOM Harborcenter" in e.location:
+                            normalized_location = "LECOM Harborcenter"
+                        else:
+                            normalized_location = e.location
+                    
+                    key = f"{e.summary}|{e.start.isoformat()}|{e.end.isoformat()}|{normalized_location}"
+                    if key not in unique_map:
+                        unique_map[key] = e
                 unique_events = sorted(unique_map.values(), key=lambda e: e.start)
                 ics_bytes = build_ics(unique_events, cal_name=team.name, tz_name=timezone)
                 (docs / preferred_filename).write_bytes(ics_bytes)
