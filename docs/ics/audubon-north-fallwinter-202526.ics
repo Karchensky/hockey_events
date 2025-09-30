@@ -5,16 +5,4 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Audubon North
 X-WR-TIMEZONE:America/New_York
-BEGIN:VEVENT
-SUMMARY:Audubon North vs. RCR Yachts (2-0)
-DTSTART:20250930T012000Z
-DTEND:20250930T023500Z
-DTSTAMP:20250929T151047Z
-UID:evt_56d4357f9791dc90c70cf53dd34071d5a0b9c727
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
-LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
-END:VEVENT
 END:VCALENDAR
