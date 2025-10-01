@@ -5,4 +5,40 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Audubon North
 X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. Britesmith (1-1)
+DTSTART:20251007T015000Z
+DTEND:20251007T030500Z
+DTSTAMP:20251001T033905Z
+UID:evt_4019fca4f0a019a5d7d8fab0665fde2fc2374f38
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300893?subseason=952202
+LOCATION:Riverside Rink
+URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
+ son=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. Five Star Services (0-1)
+DTSTART:20251017T015000Z
+DTEND:20251017T030500Z
+DTSTAMP:20251001T033905Z
+UID:evt_d5c8bf5b8955a3e2aa409c7e615e01b9003803fc
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300893?subseason=952202
+LOCATION:Riverside Rink
+URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
+ son=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. Visualeyes (0-0)
+DTSTART:20251024T013500Z
+DTEND:20251024T025000Z
+DTSTAMP:20251001T033905Z
+UID:evt_37ee49422f0ab6bb9374d8342cf1e00c11c888e5
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300893?subseason=952202
+LOCATION:Cazenovia Rink
+URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
+ son=952202
+END:VEVENT
 END:VCALENDAR
