@@ -6,11 +6,11 @@ METHOD:PUBLISH
 X-WR-CALNAME:Audubon North
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. Five Star Services (0-1)
+SUMMARY:Audubon North vs. Five Star Services (0-3)
 DTSTART:20251016T015000Z
 DTEND:20251016T030500Z
-DTSTAMP:20251010T032801Z
-UID:evt_9f92a044fa460c1f51e1bd5320a47d0cae33c81b
+DTSTAMP:20251010T151039Z
+UID:evt_666f330a4af28587cd20aa17c8a4c0cf67fa33fb
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202
 LOCATION:Riverside Rink
@@ -18,11 +18,11 @@ URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
  son=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. Visualeyes (0-1)
+SUMMARY:Audubon North vs. Visualeyes (1-2)
 DTSTART:20251024T013500Z
 DTEND:20251024T025000Z
-DTSTAMP:20251010T032801Z
-UID:evt_03e173f6d1f800d7240f6d9c84011f0fe6806a83
+DTSTAMP:20251010T151039Z
+UID:evt_7e392340659454ed17df136392ac6a54372592fe
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202
 LOCATION:Cazenovia Rink
@@ -30,11 +30,11 @@ URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
  son=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. M&M Forwarding (1-1)
+SUMMARY:Audubon North vs. M&M Forwarding (1-2)
 DTSTART:20251029T015000Z
 DTEND:20251029T030500Z
-DTSTAMP:20251010T032801Z
-UID:evt_f00b1f20d8b8bddb411a1898d0be88a837395e00
+DTSTAMP:20251010T151039Z
+UID:evt_ed6e00d10bb1435dffc1a1e0d9e045feb5cef0e5
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202
 LOCATION:Cazenovia Rink
