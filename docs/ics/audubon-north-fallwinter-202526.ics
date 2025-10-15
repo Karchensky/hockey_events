@@ -9,7 +9,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Five Star Services (1-3)
 DTSTART:20251016T015000Z
 DTEND:20251016T030500Z
-DTSTAMP:20251014T151447Z
+DTSTAMP:20251015T033357Z
 UID:evt_0403902e7cb8367f307e3dbc2cdfa95f77a988aa
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202
@@ -21,7 +21,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Visualeyes (1-2)
 DTSTART:20251024T013500Z
 DTEND:20251024T025000Z
-DTSTAMP:20251014T151447Z
+DTSTAMP:20251015T033357Z
 UID:evt_7e392340659454ed17df136392ac6a54372592fe
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202
@@ -30,11 +30,11 @@ URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
  son=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. M&M Forwarding (1-2)
+SUMMARY:Audubon North vs. M&M Forwarding (2-2)
 DTSTART:20251029T015000Z
 DTEND:20251029T030500Z
-DTSTAMP:20251014T151447Z
-UID:evt_ed6e00d10bb1435dffc1a1e0d9e045feb5cef0e5
+DTSTAMP:20251015T033357Z
+UID:evt_804d2b057018848a12a2c92e6bbf657cb074ff7d
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202
 LOCATION:Cazenovia Rink
