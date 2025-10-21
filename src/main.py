@@ -13,6 +13,7 @@ from src.scrapers.erie_metro import ErieMetroScraper
 from src.scrapers.rinks_harborcenter import HarborcenterScraper
 from src.utils.events import Event
 from src.utils.ics import build_ics
+import asyncio
 
 
 def slugify(name: str) -> str:
