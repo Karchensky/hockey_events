@@ -30,22 +30,52 @@ class ErieMetroScraper(Scraper):
         return "eriemetrosports.com" in url
 
     def scrape(self, url: str, timezone: str) -> List[Event]:
-        """Main scrape method that uses browser automation"""
+        """Main scrape method that uses Mac user agent (working) with browser automation fallback"""
+        # Strategy 1: Mac user agent (most reliable)
         try:
-            # Run the async browser scraping
-            content = asyncio.run(self._scrape_with_browser(url))
-            soup = BeautifulSoup(content, "html.parser")
+            resp = requests.get(url, timeout=30, headers={
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                'Accept-Language': 'en-US,en;q=0.5',
+                'Accept-Encoding': 'gzip, deflate',
+                'Connection': 'keep-alive',
+                'Upgrade-Insecure-Requests': '1',
+            })
+            resp.raise_for_status()
+            soup = BeautifulSoup(resp.text, "html.parser")
         except Exception as e:
-            # Fallback to requests if browser fails
-            print(f"Browser scraping failed, trying requests fallback: {e}")
+            print(f"Mac user agent failed, trying browser automation: {e}")
+            
+            # Strategy 2: Browser automation fallback
             try:
-                resp = requests.get(url, timeout=30, headers={
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-                })
-                resp.raise_for_status()
-                soup = BeautifulSoup(resp.text, "html.parser")
-            except Exception as fallback_error:
-                raise Exception(f"Both browser and requests failed. Browser: {e}, Requests: {fallback_error}")
+                content = asyncio.run(self._scrape_with_browser(url))
+                soup = BeautifulSoup(content, "html.parser")
+            except Exception as e2:
+                print(f"Browser automation failed, trying mobile user agent: {e2}")
+                
+                # Strategy 3: Mobile user agent fallback
+                try:
+                    resp = requests.get(url, timeout=30, headers={
+                        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1',
+                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                        'Accept-Language': 'en-US,en;q=0.5',
+                        'Accept-Encoding': 'gzip, deflate',
+                        'Connection': 'keep-alive',
+                    })
+                    resp.raise_for_status()
+                    soup = BeautifulSoup(resp.text, "html.parser")
+                except Exception as e3:
+                    # If all strategies fail, return placeholder event
+                    print(f"All scraping strategies failed for Erie Metro. Mac UA: {e}, Browser: {e2}, Mobile UA: {e3}")
+                    return [Event(
+                        summary=f"{self.team_name} - Schedule Unavailable",
+                        start=datetime.now(pytz.timezone(timezone)),
+                        end=datetime.now(pytz.timezone(timezone)),
+                        timezone=timezone,
+                        location="Erie Metro Sports",
+                        description="Unable to retrieve schedule due to bot protection. Please check the website directly.",
+                        source_url=url,
+                    )]
 
         events: List[Event] = []
 
@@ -137,7 +167,7 @@ class ErieMetroScraper(Scraper):
         page = None
         
         try:
-            # Launch browser with stealth settings
+            # Launch browser with enhanced stealth settings for cloud environments
             browser = await playwright.chromium.launch(
                 headless=True,
                 args=[
@@ -148,6 +178,24 @@ class ErieMetroScraper(Scraper):
                     '--disable-features=VizDisplayCompositor',
                     '--disable-extensions',
                     '--disable-plugins',
+                    '--disable-gpu',
+                    '--disable-software-rasterizer',
+                    '--disable-background-timer-throttling',
+                    '--disable-backgrounding-occluded-windows',
+                    '--disable-renderer-backgrounding',
+                    '--disable-field-trial-config',
+                    '--disable-ipc-flooding-protection',
+                    '--no-first-run',
+                    '--no-default-browser-check',
+                    '--disable-default-apps',
+                    '--disable-popup-blocking',
+                    '--disable-prompt-on-repost',
+                    '--disable-sync',
+                    '--disable-translate',
+                    '--hide-scrollbars',
+                    '--mute-audio',
+                    '--no-zygote',
+                    '--single-process',
                 ]
             )
             
@@ -161,25 +209,98 @@ class ErieMetroScraper(Scraper):
             
             page = await context.new_page()
             
-            # Navigate to the page with shorter timeout
+            # Add stealth scripts to avoid detection
+            await page.add_init_script("""
+                Object.defineProperty(navigator, 'webdriver', {
+                    get: () => undefined,
+                });
+                
+                Object.defineProperty(navigator, 'plugins', {
+                    get: () => [1, 2, 3, 4, 5],
+                });
+                
+                Object.defineProperty(navigator, 'languages', {
+                    get: () => ['en-US', 'en'],
+                });
+                
+                Object.defineProperty(navigator, 'platform', {
+                    get: () => 'Win32',
+                });
+                
+                Object.defineProperty(navigator, 'hardwareConcurrency', {
+                    get: () => 8,
+                });
+                
+                Object.defineProperty(navigator, 'deviceMemory', {
+                    get: () => 8,
+                });
+                
+                window.chrome = {
+                    runtime: {},
+                };
+                
+                // Override permissions API
+                const originalQuery = window.navigator.permissions.query;
+                window.navigator.permissions.query = (parameters) => (
+                    parameters.name === 'notifications' ?
+                        Promise.resolve({ state: Notification.permission }) :
+                        originalQuery(parameters)
+                );
+                
+                // Override getParameter
+                Object.defineProperty(WebGLRenderingContext.prototype, 'getParameter', {
+                    value: function(parameter) {
+                        if (parameter === 37445) {
+                            return 'Intel Inc.';
+                        }
+                        if (parameter === 37446) {
+                            return 'Intel Iris OpenGL Engine';
+                        }
+                        return WebGLRenderingContext.prototype.getParameter.call(this, parameter);
+                    },
+                });
+            """)
+            
+            # First visit homepage to establish session
+            try:
+                await page.goto('https://www.eriemetrosports.com/', wait_until='domcontentloaded', timeout=10000)
+                await asyncio.sleep(random.uniform(1, 3))
+            except Exception:
+                pass  # Continue even if homepage fails
+            
+            # Navigate to the target page
             response = await page.goto(url, wait_until='domcontentloaded', timeout=15000)
             
             if response and response.status == 403:
                 raise Exception(f"403 Forbidden: {url}")
             
-            # Wait a bit for content to load
-            await asyncio.sleep(2)
+            # Wait a bit for content to load with random delay
+            await asyncio.sleep(random.uniform(2, 4))
             
             # Get page content
             content = await page.content()
+            
+            # Clean up resources before returning
+            await page.close()
+            await browser.close()
+            await playwright.stop()
+            
             return content
             
         except Exception as e:
+            # Clean up resources on error
+            try:
+                if page:
+                    await page.close()
+            except Exception:
+                pass
+            try:
+                if browser:
+                    await browser.close()
+            except Exception:
+                pass
+            try:
+                await playwright.stop()
+            except Exception:
+                pass
             raise Exception(f"Browser scraping failed: {e}")
-        finally:
-            # Clean up resources
-            if page:
-                await page.close()
-            if browser:
-                await browser.close()
-            await playwright.stop()
