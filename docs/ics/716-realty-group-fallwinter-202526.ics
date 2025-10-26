@@ -6,14 +6,14 @@ METHOD:PUBLISH
 X-WR-CALNAME:716 Realty Group
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. CLUB Panthers (1-3)
-DTSTART:20251029T012000Z
-DTEND:20251029T023500Z
-DTSTAMP:20251025T150437Z
-UID:evt_9813e3638c13e9c75ad2bf163da02b00ee64ca61
+SUMMARY:716 Realty Group vs. Britesmith (2-3)
+DTSTART:20251028T015000Z
+DTEND:20251028T030500Z
+DTSTAMP:20251026T033644Z
+UID:evt_6546a627e6e4c66e925c52b8e595c5d4d8e298bd
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300900?subseason=952202
-LOCATION:Buffalo State
+LOCATION:Riverside Rink
 URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
  son=952202
 END:VEVENT
