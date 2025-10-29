@@ -6,22 +6,10 @@ METHOD:PUBLISH
 X-WR-CALNAME:Audubon North
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. M&M Forwarding (2-3)
-DTSTART:20251029T015000Z
-DTEND:20251029T030500Z
-DTSTAMP:20251028T151115Z
-UID:evt_0d8c64b9ce5bb6d22e41b08ecd523314ca6f8839
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
-LOCATION:Cazenovia Rink
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Audubon North vs. Metro Stars (5-0)
 DTSTART:20251107T030500Z
 DTEND:20251107T042000Z
-DTSTAMP:20251028T151115Z
+DTSTAMP:20251029T034316Z
 UID:evt_353d31868c17762f5db4d93e17c522e05edc100f
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202
