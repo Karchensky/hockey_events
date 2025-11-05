@@ -6,22 +6,10 @@ METHOD:PUBLISH
 X-WR-CALNAME:716 Realty Group
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. AM Lumber (2-2)
-DTSTART:20251105T025000Z
-DTEND:20251105T040500Z
-DTSTAMP:20251104T151111Z
-UID:evt_99e1ea298395d15d0246df941b110c76daccdc48
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
-LOCATION:Riverside Rink
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. M&M Forwarding (2-3)
 DTSTART:20251112T022000Z
 DTEND:20251112T033500Z
-DTSTAMP:20251104T151111Z
+DTSTAMP:20251105T033936Z
 UID:evt_fa1682151c20849d852338e58fa59df26891c116
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300900?subseason=952202
@@ -33,7 +21,7 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. RCR Yachts (5-2)
 DTSTART:20251118T025000Z
 DTEND:20251118T040500Z
-DTSTAMP:20251104T151111Z
+DTSTAMP:20251105T033936Z
 UID:evt_2f86f45fb5ce42b782d0073cd74c378591083f3e
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300900?subseason=952202
@@ -45,7 +33,7 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. Audubon (6-1)
 DTSTART:20251125T005000Z
 DTEND:20251125T020500Z
-DTSTAMP:20251104T151111Z
+DTSTAMP:20251105T033936Z
 UID:evt_50046e079416c8a8335b2d9fbeaf31c2fbb142c8
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300900?subseason=952202
