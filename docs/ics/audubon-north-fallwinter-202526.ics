@@ -6,11 +6,11 @@ METHOD:PUBLISH
 X-WR-CALNAME:Audubon North
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. AM Lumber (2-2)
+SUMMARY:Audubon North vs. AM Lumber (3-3)
 DTSTART:20251114T032000Z
 DTEND:20251114T043500Z
-DTSTAMP:20251110T034553Z
-UID:evt_bf35ef880c102b11a2f0928abd286c5a5ef8d70b
+DTSTAMP:20251110T151125Z
+UID:evt_a9b928e66324a2e0de98d873000be9e7e6b099f3
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202
 LOCATION:Riverside Rink
@@ -21,7 +21,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Britesmith (3-4)
 DTSTART:20251120T022000Z
 DTEND:20251120T033500Z
-DTSTAMP:20251110T034553Z
+DTSTAMP:20251110T151125Z
 UID:evt_311068ca69100957a7fd86948ce2c683ef884177
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202
@@ -30,11 +30,11 @@ URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
  son=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. 716 Realty Group (6-2)
+SUMMARY:Audubon North vs. 716 Realty Group (6-3)
 DTSTART:20251125T005000Z
 DTEND:20251125T020500Z
-DTSTAMP:20251110T034553Z
-UID:evt_82816e1a38b9b6109e99f4b6bd049afc7f0850f3
+DTSTAMP:20251110T151125Z
+UID:evt_d33d0d759659778c77aacb2a6d8caa06c89314a9
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202
 LOCATION:Buffalo State
