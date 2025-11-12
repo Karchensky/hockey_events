@@ -6,23 +6,11 @@ METHOD:PUBLISH
 X-WR-CALNAME:716 Realty Group
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. M&M Forwarding (2-4)
-DTSTART:20251112T022000Z
-DTEND:20251112T033500Z
-DTSTAMP:20251111T151306Z
-UID:evt_f64ff5316aa016f0900cee0bb9e0188111845d44
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
-LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. RCR Yachts (6-2)
+SUMMARY:716 Realty Group vs. RCR Yachts (6-3)
 DTSTART:20251118T025000Z
 DTEND:20251118T040500Z
-DTSTAMP:20251111T151306Z
-UID:evt_09bae0b024862d367044e3bf85d9e77e53a9af44
+DTSTAMP:20251112T034025Z
+UID:evt_adef03babf54b374b59ab66ace123c60c8835cb4
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300900?subseason=952202
 LOCATION:Riverside Rink
@@ -33,7 +21,7 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. Audubon (7-1)
 DTSTART:20251125T005000Z
 DTEND:20251125T020500Z
-DTSTAMP:20251111T151306Z
+DTSTAMP:20251112T034025Z
 UID:evt_cd04aa4f6295c440d17006d1ead184b2402abd87
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300900?subseason=952202
