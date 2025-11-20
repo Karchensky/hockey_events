@@ -6,22 +6,10 @@ METHOD:PUBLISH
 X-WR-CALNAME:Audubon North
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. Britesmith (4-4)
-DTSTART:20251120T022000Z
-DTEND:20251120T033500Z
-DTSTAMP:20251119T151051Z
-UID:evt_0ec8fa1748b85184ae73d8f0d26a33f038c06829
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
-LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Audubon North vs. 716 Realty Group (6-4)
 DTSTART:20251125T005000Z
 DTEND:20251125T020500Z
-DTSTAMP:20251119T151051Z
+DTSTAMP:20251120T033827Z
 UID:evt_f2d60453131e156be9795a1cfd5fbdb7e2c1c822
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202
