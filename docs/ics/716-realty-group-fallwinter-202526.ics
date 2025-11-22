@@ -6,11 +6,11 @@ METHOD:PUBLISH
 X-WR-CALNAME:716 Realty Group
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. Audubon (8-1)
+SUMMARY:716 Realty Group vs. Audubon (9-1)
 DTSTART:20251125T005000Z
 DTEND:20251125T020500Z
-DTSTAMP:20251121T150949Z
-UID:evt_9ce1b780841b71652cb9cf44f8b9e11714ccd1bb
+DTSTAMP:20251122T033251Z
+UID:evt_76e8ba2ce364fec05021cfaeb7ed13dbc0193525
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300900?subseason=952202
 LOCATION:Buffalo State
