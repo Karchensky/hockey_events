@@ -9,7 +9,7 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. Replace (0-0)
 DTSTART:20251203T022000Z
 DTEND:20251203T033500Z
-DTSTAMP:20251126T034329Z
+DTSTAMP:20251126T150925Z
 UID:evt_eca1d95765a7df267c90c924c0a205d4dee487db
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300900?subseason=952202
@@ -18,11 +18,11 @@ URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
  son=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. RCR Yachts (7-3)
+SUMMARY:716 Realty Group vs. RCR Yachts (8-3)
 DTSTART:20251209T022000Z
 DTEND:20251209T033500Z
-DTSTAMP:20251126T034329Z
-UID:evt_b5756487b7b5d024a63862805b1b5ef2109fba39
+DTSTAMP:20251126T150925Z
+UID:evt_8e836f7c4a676c40d41ac85cb8d2bd5b0488e8ca
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300900?subseason=952202
 LOCATION:Buffalo State
@@ -30,11 +30,11 @@ URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
  son=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. M&M Forwarding (3-5)
+SUMMARY:716 Realty Group vs. M&M Forwarding (4-5)
 DTSTART:20251217T025000Z
 DTEND:20251217T040500Z
-DTSTAMP:20251126T034329Z
-UID:evt_a5a854caa9dcde0c05e26c02c98093fb0c8ba1b9
+DTSTAMP:20251126T150925Z
+UID:evt_2e3c26fb84605756ec4362fcdd9854bf316ac653
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300900?subseason=952202
 LOCATION:Riverside Rink
@@ -45,7 +45,7 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. Metro Stars (8-0)
 DTSTART:20251227T022000Z
 DTEND:20251227T033500Z
-DTSTAMP:20251126T034329Z
+DTSTAMP:20251126T150925Z
 UID:evt_542aaddaaa555dfc938328daad877dc13a20609d
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300900?subseason=952202
@@ -54,11 +54,11 @@ URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
  son=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. Hammers (7-4)
+SUMMARY:716 Realty Group vs. Hammers (8-4)
 DTSTART:20251230T005000Z
 DTEND:20251230T020500Z
-DTSTAMP:20251126T034329Z
-UID:evt_d8fdcb21b18a41eb219abfc75acc5d2f2119a339
+DTSTAMP:20251126T150925Z
+UID:evt_f2c91052d3a477a1429d152f7aa0043014542b58
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300900?subseason=952202
 LOCATION:Buffalo State
