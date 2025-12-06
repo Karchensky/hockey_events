@@ -6,21 +6,10 @@ METHOD:PUBLISH
 X-WR-CALNAME:Golden Retrievers
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
-SUMMARY:Golden Retrievers vs. Imperial Pizza
-DTSTART:20251206T020000Z
-DTEND:20251206T031500Z
-DTSTAMP:20251205T151053Z
-UID:evt_3332c5834204648af15b718cf0535e7beb709731
-DESCRIPTION:Auto-imported from https://www.rinksatharborcenter.com/stats#/
- 1367/team/589011/schedule
-LOCATION:LECOM Harborcenter
-URL:https://www.rinksatharborcenter.com/stats#/1367/team/589011/schedule
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Golden Retrievers vs. Lumber Lions
 DTSTART:20251212T033000Z
 DTEND:20251212T044500Z
-DTSTAMP:20251205T151053Z
+DTSTAMP:20251206T033743Z
 UID:evt_bd21a3424bce41e53d868129069aac7f4c05617a
 DESCRIPTION:Auto-imported from https://www.rinksatharborcenter.com/stats#/
  1367/team/589011/schedule
@@ -31,7 +20,7 @@ BEGIN:VEVENT
 SUMMARY:Golden Retrievers vs. Reverse Retro
 DTSTART:20251231T021500Z
 DTEND:20251231T033000Z
-DTSTAMP:20251205T151053Z
+DTSTAMP:20251206T033743Z
 UID:evt_35446f2a56426daefb5e93bb7ed453963ebe53c6
 DESCRIPTION:Auto-imported from https://www.rinksatharborcenter.com/stats#/
  1367/team/589011/schedule
