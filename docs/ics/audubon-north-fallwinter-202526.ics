@@ -6,11 +6,11 @@ METHOD:PUBLISH
 X-WR-CALNAME:Audubon North
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. Hammers (8-4)
+SUMMARY:Audubon North vs. Hammers (9-4)
 DTSTART:20251211T022000Z
 DTEND:20251211T033500Z
-DTSTAMP:20251206T150913Z
-UID:evt_54f92375e8e2cee0d9d30ec019b4c735a738f845
+DTSTAMP:20251207T035334Z
+UID:evt_e718504b88a8b134e31028725f07e2df7f456e66
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202
 LOCATION:Buffalo State
@@ -21,7 +21,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Bear Clause (8-4)
 DTSTART:20251218T022000Z
 DTEND:20251218T033500Z
-DTSTAMP:20251206T150913Z
+DTSTAMP:20251207T035334Z
 UID:evt_9d76f5f73874bf02960d420e1f9c9b0424749f52
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202
@@ -30,11 +30,11 @@ URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
  son=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. Britesmith (5-5)
+SUMMARY:Audubon North vs. Britesmith (5-6)
 DTSTART:20251219T032000Z
 DTEND:20251219T043500Z
-DTSTAMP:20251206T150913Z
-UID:evt_724a59b0ba854582382a39cb952b6fcef504658a
+DTSTAMP:20251207T035334Z
+UID:evt_1ab7def572963ab19148fe21816eee7aa96c4aa3
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202
 LOCATION:Riverside Rink
@@ -45,7 +45,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Visualeyes (6-5)
 DTSTART:20251224T025000Z
 DTEND:20251224T040500Z
-DTSTAMP:20251206T150913Z
+DTSTAMP:20251207T035334Z
 UID:evt_6d9d1b58fd0e7f887a30f746e9e04ade7663b689
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202
