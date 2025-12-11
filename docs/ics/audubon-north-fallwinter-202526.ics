@@ -6,22 +6,10 @@ METHOD:PUBLISH
 X-WR-CALNAME:Audubon North
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. Hammers (9-4)
-DTSTART:20251211T022000Z
-DTEND:20251211T033500Z
-DTSTAMP:20251210T151325Z
-UID:evt_e718504b88a8b134e31028725f07e2df7f456e66
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
-LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Audubon North vs. Bear Clause (8-4)
 DTSTART:20251218T022000Z
 DTEND:20251218T033500Z
-DTSTAMP:20251210T151325Z
+DTSTAMP:20251211T035326Z
 UID:evt_9d76f5f73874bf02960d420e1f9c9b0424749f52
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202
@@ -33,7 +21,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Britesmith (5-7)
 DTSTART:20251219T032000Z
 DTEND:20251219T043500Z
-DTSTAMP:20251210T151325Z
+DTSTAMP:20251211T035326Z
 UID:evt_61131317fa665069889a1742c00e9eab42ea928f
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202
@@ -45,7 +33,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Visualeyes (7-5)
 DTSTART:20251224T025000Z
 DTEND:20251224T040500Z
-DTSTAMP:20251210T151325Z
+DTSTAMP:20251211T035326Z
 UID:evt_97072817b5977547d5947623aca8f7b8a5aa87a0
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202
