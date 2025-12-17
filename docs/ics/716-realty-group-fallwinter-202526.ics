@@ -6,22 +6,10 @@ METHOD:PUBLISH
 X-WR-CALNAME:716 Realty Group
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. M&M Forwarding (6-5)
-DTSTART:20251217T025000Z
-DTEND:20251217T040500Z
-DTSTAMP:20251216T151304Z
-UID:evt_466e7b469122ca057912f7e36933a7261af0475f
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
-LOCATION:Riverside Rink
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. Metro Stars (10-1)
 DTSTART:20251227T022000Z
 DTEND:20251227T033500Z
-DTSTAMP:20251216T151304Z
+DTSTAMP:20251217T034903Z
 UID:evt_4c3a0a2c31182b8b7fb7888284260fa2aef6de28
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300900?subseason=952202
@@ -33,7 +21,7 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. Hammers (9-4)
 DTSTART:20251230T005000Z
 DTEND:20251230T020500Z
-DTSTAMP:20251216T151304Z
+DTSTAMP:20251217T034903Z
 UID:evt_4fd63052bcbc207c6a7a539fc8577e597007060b
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300900?subseason=952202
