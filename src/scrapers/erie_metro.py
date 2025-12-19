@@ -110,7 +110,10 @@ class ErieMetroScraper(Scraper):
             except Exception:
                 continue
 
-            status_text = cells[status_idx] if status_idx >= 0 else ""
+            status_text = cells[status_idx] if status_idx >= 0 and status_idx < len(cells) else ""
+            
+            # Skip games explicitly marked as completed
+            # Note: Don't skip empty status - upcoming games may not have times populated yet
             if "final" in status_text.lower():
                 continue
 
