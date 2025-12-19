@@ -6,14 +6,25 @@ METHOD:PUBLISH
 X-WR-CALNAME:Golden Retrievers
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
+SUMMARY:Golden Retrievers vs. Teeto's D5
+DTSTART:20251223T034500Z
+DTEND:20251223T050000Z
+DTSTAMP:20251219T191541Z
+UID:evt_2fa37c2298d693c3cb344fbe1bf4c52e3fffcbe7
+DESCRIPTION:Auto-imported from https://www.rinksatharborcenter.com/stats#/
+ 1367/team/589011/schedule
+LOCATION:LECOM Harborcenter - Rink 2
+URL:https://www.rinksatharborcenter.com/stats#/1367/team/589011/schedule
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:Golden Retrievers vs. Reverse Retro
 DTSTART:20251231T021500Z
 DTEND:20251231T033000Z
-DTSTAMP:20251219T151104Z
-UID:evt_35446f2a56426daefb5e93bb7ed453963ebe53c6
+DTSTAMP:20251219T191541Z
+UID:evt_f4a837ad8e66ac80cf6198c2f1efd21422889195
 DESCRIPTION:Auto-imported from https://www.rinksatharborcenter.com/stats#/
  1367/team/589011/schedule
-LOCATION:LECOM Harborcenter
+LOCATION:LECOM Harborcenter - Rink 2
 URL:https://www.rinksatharborcenter.com/stats#/1367/team/589011/schedule
 END:VEVENT
 END:VCALENDAR

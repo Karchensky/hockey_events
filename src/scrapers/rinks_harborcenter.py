@@ -10,7 +10,7 @@ from playwright.sync_api import sync_playwright
 from dateutil import parser as dateparser
 
 from src.scrapers.base import Scraper
-from src.utils.events import Event, guess_end, localize
+from src.utils.events import Event, guess_end, localize, adjust_year_if_past
 
 
 TEAM_VS_REGEX = re.compile(
@@ -73,29 +73,38 @@ class HarborcenterScraper(Scraper):
                 
             summary = f"{team_a} vs. {team_b}"
 
-            # Try to extract date from the current text first
+            # Try to extract date - first try extracting just the date/time part
+            # to avoid issues with team names containing digits confusing fuzzy parsing
             dt = None
-            try:
-                dt = dateparser.parse(text, fuzzy=True, ignoretz=True)
-            except Exception:
-                # If that fails, try extracting just the date/time part
+            
+            # Try ISO format first: "on YYYY-MM-DD at HH:MM"
+            iso_match = re.search(r'on\s+(\d{4}-\d{2}-\d{2})\s+at\s+(\d{1,2}:\d{2})', text, re.IGNORECASE)
+            if iso_match:
+                date_str = f"{iso_match.group(1)} {iso_match.group(2)}"
                 try:
-                    # Look for patterns like "on MM/DD/YY HH:MM AM/PM"
-                    date_match = re.search(r'on\s+(\d+/\d+/\d+\s+\d+:\d+\s*[AP]M)', text, re.IGNORECASE)
-                    if date_match:
-                        date_text = date_match.group(1)
-                        dt = dateparser.parse(date_text, fuzzy=True, ignoretz=True)
+                    dt = dateparser.parse(date_str, ignoretz=True)
                 except Exception:
-                    # If that fails, try with a smaller context window
+                    dt = None
+            
+            # Try US format: "on MM/DD/YY HH:MM AM/PM"
+            if not dt:
+                us_match = re.search(r'on\s+(\d+/\d+/\d+\s+\d+:\d+\s*[AP]M)', text, re.IGNORECASE)
+                if us_match:
                     try:
-                        context_text = " ".join(texts[i:i+2])
-                        dt = dateparser.parse(context_text, fuzzy=True, ignoretz=True)
+                        dt = dateparser.parse(us_match.group(1), ignoretz=True)
+                        # Handle year rollover for 2-digit years that might default to current year
+                        dt = adjust_year_if_past(dt, now_local.replace(tzinfo=None))
                     except Exception:
-                        try:
-                            prev_context = " ".join(texts[max(0, i-1):i+2])
-                            dt = dateparser.parse(prev_context, fuzzy=True, ignoretz=True)
-                        except Exception:
-                            dt = None
+                        dt = None
+            
+            # Fallback to fuzzy parsing if no explicit pattern matched
+            if not dt:
+                try:
+                    dt = dateparser.parse(text, fuzzy=True, ignoretz=True)
+                    # Handle year rollover (e.g., "Jan 5" should be 2026, not 2025)
+                    dt = adjust_year_if_past(dt, now_local.replace(tzinfo=None))
+                except Exception:
+                    dt = None
 
             if not dt:
                 i += 1

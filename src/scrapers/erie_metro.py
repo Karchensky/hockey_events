@@ -15,7 +15,7 @@ import pytz
 from playwright.async_api import async_playwright, Browser, Page
 
 from src.scrapers.base import Scraper
-from src.utils.events import Event, guess_end, localize
+from src.utils.events import Event, guess_end, localize, adjust_year_if_past
 
 # Suppress asyncio warnings
 logging.getLogger('asyncio').setLevel(logging.CRITICAL)
@@ -121,11 +121,15 @@ class ErieMetroScraper(Scraper):
                 dt_naive = dateparser.parse(dt_text, fuzzy=True, ignoretz=True)
                 if dt_naive is None:
                     continue
+                # Handle year rollover (e.g., "Jan 5" should be 2026, not 2025)
+                dt_naive = adjust_year_if_past(dt_naive, now_local.replace(tzinfo=None))
                 start = localize(dt_naive, timezone)
             except Exception:
                 try:
                     date_only = dateparser.parse(date_text, fuzzy=True, ignoretz=True)
                     date_only = date_only.replace(hour=21, minute=0, second=0, microsecond=0)
+                    # Handle year rollover
+                    date_only = adjust_year_if_past(date_only, now_local.replace(tzinfo=None))
                     start = localize(date_only, timezone)
                 except Exception:
                     continue

@@ -49,3 +49,15 @@ def localize(dt: datetime, tz_name: str) -> datetime:
     if dt.tzinfo is None:
         return tz.localize(dt)
     return dt.astimezone(tz)
+
+
+def adjust_year_if_past(dt: datetime, now: datetime) -> datetime:
+    """
+    If a parsed date is in the past but would be in the future with +1 year,
+    assume it's meant to be next year (handles year rollover for dates without explicit years).
+    """
+    if dt < now:
+        next_year = dt.replace(year=dt.year + 1)
+        if next_year > now:
+            return next_year
+    return dt
