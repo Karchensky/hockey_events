@@ -1,143 +1,162 @@
 from __future__ import annotations
 
 from datetime import datetime
-from typing import List
+from typing import List, Optional
 import re
+from urllib.parse import urljoin
 
-import pytz
-from bs4 import BeautifulSoup
-from playwright.sync_api import sync_playwright
-from dateutil import parser as dateparser
+from bs4 import BeautifulSoup, Tag
+from playwright.sync_api import Page, sync_playwright
 
 from src.scrapers.base import Scraper
-from src.utils.events import Event, guess_end, localize, adjust_year_if_past
+from src.utils.events import Event, guess_end, localize
 
 
-TEAM_VS_REGEX = re.compile(
-    r"([A-Za-z0-9 .\'&\-]+?)\s+vs\.?\s+([A-Za-z0-9 .\'&\-]+?)(?=\s+(?:on\b|@|\-|,|\d|$))",
+GAME_LABEL_RE = re.compile(
+    r"(.+?)\s+vs\s+(.+?)\s+on\s+(\d{4}-\d{2}-\d{2})\s+at\s+(\d{2}:\d{2})",
     re.IGNORECASE,
 )
-RINK_REGEX = re.compile(r"Rink\s*([0-9]+)", re.IGNORECASE)
+SCORE_RE = re.compile(r"\b(\d+)\s*-\s*(\d+)\b")
 
 
 class HarborcenterScraper(Scraper):
+    def __init__(self, team_name: Optional[str] = None) -> None:
+        self.team_name = team_name
+
     def can_handle(self, url: str) -> bool:
         return "rinksatharborcenter.com" in url
 
     def scrape(self, url: str, timezone: str) -> List[Event]:
-        events: List[Event] = []
+        pages: List[tuple[str, str]] = []
+
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True)
-            context = browser.new_context()
-            page = context.new_page()
-            page.goto(url, wait_until="networkidle")
-            page.wait_for_timeout(2500)
-            html = page.content()
-            context.close()
+            page = browser.new_page()
+
+            for page_url in self._target_urls(url):
+                html = self._render_page(page, page_url)
+                pages.append((page_url, html))
+
             browser.close()
 
+        events: List[Event] = []
+        for source_url, html in pages:
+            events.extend(self._parse_page(source_url, html, timezone))
+        return events
+
+    def _target_urls(self, url: str) -> List[str]:
+        companion = self._companion_url(url)
+        urls: List[str] = []
+        if companion and "/scores" in companion:
+            urls.append(companion)
+        if url not in urls:
+            urls.append(url)
+        if companion and companion not in urls:
+            urls.append(companion)
+        return urls
+
+    def _companion_url(self, url: str) -> Optional[str]:
+        if "/schedule" in url:
+            return url.replace("/schedule", "/scores")
+        if "/scores" in url:
+            return url.replace("/scores", "/schedule")
+        return None
+
+    def _render_page(self, page: Page, url: str) -> str:
+        page.goto(url, wait_until="networkidle", timeout=60000)
+        page.wait_for_timeout(2500)
+        self._load_all_rows(page)
+        return page.content()
+
+    def _load_all_rows(self, page: Page) -> None:
+        while True:
+            load_more = page.locator("text=LOAD MORE")
+            if load_more.count() == 0:
+                return
+
+            button = load_more.first
+            if not button.is_visible():
+                return
+
+            before = page.locator("tr[role='article']").count()
+            button.click()
+            page.wait_for_timeout(1500)
+            after = page.locator("tr[role='article']").count()
+            if after <= before:
+                return
+
+    def _parse_page(self, source_url: str, html: str, timezone: str) -> List[Event]:
         soup = BeautifulSoup(html, "html.parser")
+        events: List[Event] = []
 
-        nodes = soup.find_all(["div", "li", "tr", "p", "span"])
-        texts = [n.get_text(" ", strip=True) for n in nodes]
-        texts = [t for t in texts if t and len(t) > 5]
-
-        tz = pytz.timezone(timezone)
-        now_local = datetime.now(tz)
-
-        i = 0
-        while i < len(texts):
-            text = texts[i]
-            if "vs" not in text.lower():
-                i += 1
-                continue
-
-            m = TEAM_VS_REGEX.search(text)
-            if not m:
-                combined = " ".join(texts[i:i+2])
-                m = TEAM_VS_REGEX.search(combined)
-                if not m:
-                    i += 1
-                    continue
-
-            team_a = m.group(1).strip()
-            team_b = m.group(2).strip()
-            
-            # Filter out malformed matches (table headers, etc.)
-            if team_a.lower() in ['away', 'home', 'division', 'score', 'date', 'time', 'actions', 'rink']:
-                i += 1
-                continue
-            if team_b.lower() in ['away', 'home', 'division', 'score', 'date', 'time', 'actions', 'rink']:
-                i += 1
-                continue
-                
-            summary = f"{team_a} vs. {team_b}"
-
-            # Try to extract date - first try extracting just the date/time part
-            # to avoid issues with team names containing digits confusing fuzzy parsing
-            dt = None
-            
-            # Try ISO format first: "on YYYY-MM-DD at HH:MM"
-            iso_match = re.search(r'on\s+(\d{4}-\d{2}-\d{2})\s+at\s+(\d{1,2}:\d{2})', text, re.IGNORECASE)
-            if iso_match:
-                date_str = f"{iso_match.group(1)} {iso_match.group(2)}"
-                try:
-                    dt = dateparser.parse(date_str, ignoretz=True)
-                except Exception:
-                    dt = None
-            
-            # Try US format: "on MM/DD/YY HH:MM AM/PM"
-            if not dt:
-                us_match = re.search(r'on\s+(\d+/\d+/\d+\s+\d+:\d+\s*[AP]M)', text, re.IGNORECASE)
-                if us_match:
-                    try:
-                        dt = dateparser.parse(us_match.group(1), ignoretz=True)
-                        # Handle year rollover for 2-digit years that might default to current year
-                        dt = adjust_year_if_past(dt, now_local.replace(tzinfo=None))
-                    except Exception:
-                        dt = None
-            
-            # Fallback to fuzzy parsing if no explicit pattern matched
-            if not dt:
-                try:
-                    dt = dateparser.parse(text, fuzzy=True, ignoretz=True)
-                    # Handle year rollover (e.g., "Jan 5" should be 2026, not 2025)
-                    dt = adjust_year_if_past(dt, now_local.replace(tzinfo=None))
-                except Exception:
-                    dt = None
-
-            if not dt:
-                i += 1
-                continue
-
-            start = localize(dt, timezone)
-            if start < now_local:
-                i += 1
-                continue
-
-            rink_label = None
-            rink_match = RINK_REGEX.search(text)
-            if not rink_match and i + 1 < len(texts):
-                rink_match = RINK_REGEX.search(texts[i+1])
-            if rink_match:
-                rink_label = f"Rink {rink_match.group(1)}"
-
-            location = "LECOM Harborcenter"
-            if rink_label:
-                location = f"{location} - {rink_label}"
-
-            events.append(
-                Event(
-                    summary=summary,
-                    start=start,
-                    end=guess_end(start),
-                    timezone=timezone,
-                    location=location,
-                    description=f"Auto-imported from {url}",
-                    source_url=url,
-                )
-            )
-
-            i += 1  # advance to next node to avoid infinite loops
+        for row in soup.select("tr[role='article']"):
+            event = self._parse_row(row, source_url, timezone)
+            if event:
+                events.append(event)
 
         return events
+
+    def _parse_row(self, row: Tag, source_url: str, timezone: str) -> Optional[Event]:
+        label = row.find("div", class_="sr-only")
+        if not label:
+            return None
+
+        label_text = " ".join(label.get_text(" ", strip=True).split())
+        label_match = GAME_LABEL_RE.search(label_text)
+        if not label_match:
+            return None
+
+        away_team = label_match.group(1).strip()
+        home_team = label_match.group(2).strip()
+        dt_naive = datetime.strptime(
+            f"{label_match.group(3)} {label_match.group(4)}",
+            "%Y-%m-%d %H:%M",
+        )
+        start = localize(dt_naive, timezone)
+
+        cells = row.find_all("td")
+        location = cells[-1].get_text(" ", strip=True) if cells else None
+        status_text = ""
+        actions_cell = row.find("td", class_=lambda cls: cls and "actions" in cls.split())
+        if actions_cell:
+            status_text = " ".join(actions_cell.get_text(" ", strip=True).split())
+
+        score_text = self._extract_score_text(row)
+        summary = f"{away_team} vs. {home_team}"
+        if score_text:
+            summary = f"{summary} ({score_text})"
+
+        description_lines = [f"Auto-imported from {source_url}"]
+        if status_text:
+            description_lines.append(f"Status: {status_text}")
+        if score_text:
+            description_lines.append(f"Score: {score_text}")
+
+        game_url = self._extract_game_url(row, source_url)
+        return Event(
+            summary=summary,
+            start=start,
+            end=guess_end(start),
+            timezone=timezone,
+            location=location or "LECOM Harborcenter",
+            description="\n".join(description_lines),
+            source_url=source_url,
+            external_id=game_url,
+        )
+
+    def _extract_game_url(self, row: Tag, source_url: str) -> Optional[str]:
+        for link in row.find_all("a", href=True):
+            href = link["href"]
+            if "/game/" in href:
+                return urljoin(source_url.split("#", 1)[0], href)
+        return None
+
+    def _extract_score_text(self, row: Tag) -> Optional[str]:
+        for cell in row.find_all("td"):
+            text = " ".join(cell.get_text(" ", strip=True).split())
+            if not text or re.search(r"[A-Za-z]", text):
+                continue
+            match = SCORE_RE.search(text)
+            if match:
+                return f"{match.group(1)}-{match.group(2)}"
+        return None

@@ -18,9 +18,13 @@ class Event:
     location: Optional[str] = None
     description: Optional[str] = None
     source_url: Optional[str] = None
+    external_id: Optional[str] = None
 
     def google_event_id(self) -> str:
-        base = f"{self.source_url}|{self.start.isoformat()}|{self.end.isoformat()}|{self.summary}|{self.location or ''}"
+        if self.external_id:
+            base = self.external_id
+        else:
+            base = f"{self.source_url}|{self.start.isoformat()}|{self.end.isoformat()}|{self.summary}|{self.location or ''}"
         digest = sha1(base.encode("utf-8")).hexdigest()
         # Google Calendar event IDs must be between 5 and 1024 chars, and may contain only letters, digits, '-' and '_'
         return f"evt_{digest[:40]}"

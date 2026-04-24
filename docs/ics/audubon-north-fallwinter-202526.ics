@@ -6,183 +6,344 @@ METHOD:PUBLISH
 X-WR-CALNAME:Audubon North
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. Hammers
-DTSTART:20260918T010000Z
-DTEND:20260918T021500Z
-DTSTAMP:20260424T120548Z
-UID:evt_c670132c11402b4bf633d4abdeb3c72cd510827c
+SUMMARY:Audubon North vs. Hammers (W 5-3)
+DTSTART:20250918T012000Z
+DTEND:20250918T023500Z
+DTSTAMP:20260424T124237Z
+UID:evt_b142d4916195466471f4e81a406430304a8ca6b3
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
+ am_instance/10300893?subseason=952202\nResult: W 5-3\nStatus: FINAL
 LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
+URL:https://www.eriemetrosports.com/game/show/44577992?subseason=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. Visualeyes
-DTSTART:20260925T010000Z
-DTEND:20260925T021500Z
-DTSTAMP:20260424T120548Z
-UID:evt_ee91c1236628027d2cb240facddec0ddc73347a9
+SUMMARY:Audubon North vs. Visualeyes (W 8-3)
+DTSTART:20250925T012000Z
+DTEND:20250925T023500Z
+DTSTAMP:20260424T124237Z
+UID:evt_9ce5234e2edcdc9e0b7c55183c1238900a677f05
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
+ am_instance/10300893?subseason=952202\nResult: W 8-3\nStatus: FINAL
 LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
+URL:https://www.eriemetrosports.com/game/show/44578055?subseason=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. RCR Yachts
-DTSTART:20260930T010000Z
-DTEND:20260930T021500Z
-DTSTAMP:20260424T120548Z
-UID:evt_d6162d8c205d8d01e7d96067429df48756f601d4
+SUMMARY:Audubon North vs. RCR Yachts (L 2-3)
+DTSTART:20250930T012000Z
+DTEND:20250930T023500Z
+DTSTAMP:20260424T124237Z
+UID:evt_fd9ddc2d1b8db4af7c158e204641110dc74686e3
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
+ am_instance/10300893?subseason=952202\nResult: L 2-3\nStatus: FINAL
 LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
+URL:https://www.eriemetrosports.com/game/show/44666277?subseason=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. Britesmith
-DTSTART:20261007T010000Z
-DTEND:20261007T021500Z
-DTSTAMP:20260424T120548Z
-UID:evt_001a61d99a3efa39f9170e07714c3b8b3911d0fc
+SUMMARY:Audubon North vs. Britesmith (W 7-4)
+DTSTART:20251007T015000Z
+DTEND:20251007T030500Z
+DTSTAMP:20260424T124237Z
+UID:evt_889cda38e0260f9f2df7f6bc86db584e70278d17
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
+ am_instance/10300893?subseason=952202\nResult: W 7-4\nStatus: FINAL
 LOCATION:Riverside Rink
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
+URL:https://www.eriemetrosports.com/game/show/44696033?subseason=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. Five Star Services
-DTSTART:20261016T010000Z
-DTEND:20261016T021500Z
-DTSTAMP:20260424T120548Z
-UID:evt_7393a2136c7a35981a365fb33310e79ad109466e
+SUMMARY:Audubon North vs. Five Star Services (W 7-4)
+DTSTART:20251016T015000Z
+DTEND:20251016T030500Z
+DTSTAMP:20260424T124237Z
+UID:evt_c70c2835c311b19ce2ae94c8df05772809ea6ee7
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
+ am_instance/10300893?subseason=952202\nResult: W 7-4\nStatus: FINAL
 LOCATION:Riverside Rink
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
+URL:https://www.eriemetrosports.com/game/show/44696304?subseason=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. Visualeyes
-DTSTART:20261024T010000Z
-DTEND:20261024T021500Z
-DTSTAMP:20260424T120548Z
-UID:evt_330748a6fd7c1bef714fd075f9400af919c5a7ea
+SUMMARY:Audubon North vs. Visualeyes (W 7-4)
+DTSTART:20251024T013500Z
+DTEND:20251024T025000Z
+DTSTAMP:20260424T124237Z
+UID:evt_f9e459625bfe93ee92551052817a52f7ac140c3f
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
+ am_instance/10300893?subseason=952202\nResult: W 7-4\nStatus: FINAL
 LOCATION:Cazenovia Rink
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
+URL:https://www.eriemetrosports.com/game/show/44696318?subseason=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. M&M Forwarding
-DTSTART:20261029T010000Z
-DTEND:20261029T021500Z
-DTSTAMP:20260424T120548Z
-UID:evt_e399af06c8b1982601d3e256ea463836e3001896
+SUMMARY:Audubon North vs. M&M Forwarding (W 4-3)
+DTSTART:20251029T015000Z
+DTEND:20251029T030500Z
+DTSTAMP:20260424T124237Z
+UID:evt_a887f670b5042cabc654afb51ed07aaf27b1d462
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
+ am_instance/10300893?subseason=952202\nResult: W 4-3\nStatus: Final/OT
 LOCATION:Cazenovia Rink
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
+URL:https://www.eriemetrosports.com/game/show/44698896?subseason=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. AM Lumber
-DTSTART:20261106T020000Z
-DTEND:20261106T031500Z
-DTSTAMP:20260424T120548Z
-UID:evt_3b94e7ab5f1798c4a9e16c21008ec16cc04f61dc
+SUMMARY:Audubon North vs. AM Lumber (W 6-1)
+DTSTART:20251106T025000Z
+DTEND:20251106T040500Z
+DTSTAMP:20260424T124237Z
+UID:evt_adc2b741bfeb0f9e4d04443d400400749f560cb6
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
+ am_instance/10300893?subseason=952202\nResult: W 6-1\nStatus: FINAL
 LOCATION:Riverside Rink
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
+URL:https://www.eriemetrosports.com/game/show/44847122?subseason=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. AM Lumber
-DTSTART:20261114T020000Z
-DTEND:20261114T031500Z
-DTSTAMP:20260424T120548Z
-UID:evt_5825bc8af6d1d291897dbcba33ce016c0b84e347
+SUMMARY:Audubon North vs. AM Lumber (W 11-4)
+DTSTART:20251114T032000Z
+DTEND:20251114T043500Z
+DTSTAMP:20260424T124237Z
+UID:evt_c93e3f2748d1c4e8af065cafb924995b5be32b07
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
+ am_instance/10300893?subseason=952202\nResult: W 11-4\nStatus: FINAL
 LOCATION:Riverside Rink
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
+URL:https://www.eriemetrosports.com/game/show/44880707?subseason=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. Britesmith
-DTSTART:20261120T020000Z
-DTEND:20261120T031500Z
-DTSTAMP:20260424T120548Z
-UID:evt_d2e918e362b700faa5a6c4c694318a73405bb7c9
+SUMMARY:Audubon North vs. Britesmith (W 4-3)
+DTSTART:20251120T022000Z
+DTEND:20251120T033500Z
+DTSTAMP:20260424T124237Z
+UID:evt_aec1d9ac7771a4bfb7d0de155d25959ca9bab9b3
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
+ am_instance/10300893?subseason=952202\nResult: W 4-3\nStatus: FINAL
 LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
+URL:https://www.eriemetrosports.com/game/show/44880724?subseason=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. 716 Realty Group
-DTSTART:20261125T020000Z
-DTEND:20261125T031500Z
-DTSTAMP:20260424T120548Z
-UID:evt_382751d6cbec72cbbdb254a8dd22e7b57e5d0901
+SUMMARY:Audubon North vs. 716 Realty Group (W 11-8)
+DTSTART:20251125T005000Z
+DTEND:20251125T020500Z
+DTSTAMP:20260424T124237Z
+UID:evt_13e807fa5350f08a845d77f0ec2dfc3ee6555e5f
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
+ am_instance/10300893?subseason=952202\nResult: W 11-8\nStatus: FINAL
 LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
+URL:https://www.eriemetrosports.com/game/show/44880729?subseason=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. Visualeyes
-DTSTART:20261205T020000Z
-DTEND:20261205T031500Z
-DTSTAMP:20260424T120548Z
-UID:evt_7cd4e7a60e161a1556b58c7d0bced220c80aca9c
+SUMMARY:Audubon North vs. Visualeyes (L 1-5)
+DTSTART:20251205T032000Z
+DTEND:20251205T043500Z
+DTSTAMP:20260424T124237Z
+UID:evt_d03730780f560f763c0d00148e8b4b8b08c6bc6e
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
+ am_instance/10300893?subseason=952202\nResult: L 1-5\nStatus: FINAL
 LOCATION:Riverside Rink
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
+URL:https://www.eriemetrosports.com/game/show/44970734?subseason=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. Hammers
-DTSTART:20261211T020000Z
-DTEND:20261211T031500Z
-DTSTAMP:20260424T120548Z
-UID:evt_505e5711cef0768ce2749fbf1e270a1e628e079c
+SUMMARY:Audubon North vs. Hammers (W 7-3)
+DTSTART:20251211T022000Z
+DTEND:20251211T033500Z
+DTSTAMP:20260424T124237Z
+UID:evt_769690cca4ca4ace8b9bd12a710839e3cec29fd3
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
+ am_instance/10300893?subseason=952202\nResult: W 7-3\nStatus: FINAL
 LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
+URL:https://www.eriemetrosports.com/game/show/44971746?subseason=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. Bear Clause
-DTSTART:20261218T020000Z
-DTEND:20261218T031500Z
-DTSTAMP:20260424T120548Z
-UID:evt_77c74ba9d16c544ac575cb4de92bcf85ea48309f
+SUMMARY:Audubon North vs. Bear Clause (L 6-10)
+DTSTART:20251218T022000Z
+DTEND:20251218T033500Z
+DTSTAMP:20260424T124237Z
+UID:evt_2bea8b4170b56f109050bdef57ee8881400af001
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
+ am_instance/10300893?subseason=952202\nResult: L 6-10\nStatus: FINAL
 LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
+URL:https://www.eriemetrosports.com/game/show/44971770?subseason=952202
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. Visualeyes
-DTSTART:20261224T020000Z
-DTEND:20261224T031500Z
-DTSTAMP:20260424T120548Z
-UID:evt_4715b9cd2fc8419bbdb2ba436265e55b6dbd8f8a
+SUMMARY:Audubon North vs. Visualeyes (W 5-4)
+DTSTART:20251224T025000Z
+DTEND:20251224T040500Z
+DTSTAMP:20260424T124237Z
+UID:evt_e9f724d1a25f64e9754ba02b94ec91e00626aec1
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300893?subseason=952202
+ am_instance/10300893?subseason=952202\nResult: W 5-4\nStatus: FINAL
 LOCATION:Riverside Rink
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300893?subsea
- son=952202
+URL:https://www.eriemetrosports.com/game/show/44971792?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. RCR Yachts (W 5-2)
+DTSTART:20260106T022000Z
+DTEND:20260106T033500Z
+DTSTAMP:20260424T124237Z
+UID:evt_e3feec3c032e543a4a468708b5795a56b1606c5d
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300893?subseason=952202\nResult: W 5-2\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/44971858?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. Hammers (W 7-5)
+DTSTART:20260114T025000Z
+DTEND:20260114T040500Z
+DTSTAMP:20260424T124237Z
+UID:evt_d30e694dab19a83aab8c6e00f24c124d1531bc1e
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300893?subseason=952202\nResult: W 7-5\nStatus: FINAL
+LOCATION:Riverside Rink
+URL:https://www.eriemetrosports.com/game/show/44971884?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. Visualeyes (W 5-4)
+DTSTART:20260128T025000Z
+DTEND:20260128T040500Z
+DTSTAMP:20260424T124237Z
+UID:evt_1f9e870e0964523ce0c890c446f0c7d7dfab779d
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300893?subseason=952202\nResult: W 5-4\nStatus: FINAL
+LOCATION:Riverside Rink
+URL:https://www.eriemetrosports.com/game/show/45106036?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. RCR Yachts (W 2-1)
+DTSTART:20260203T022000Z
+DTEND:20260203T033500Z
+DTSTAMP:20260424T124237Z
+UID:evt_7ea4b934e1c4605fbca5b30048952ec593a6bcd1
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300893?subseason=952202\nResult: W 2-1\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/45136633?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. Hammers (L 3-9)
+DTSTART:20260207T022000Z
+DTEND:20260207T033500Z
+DTSTAMP:20260424T124237Z
+UID:evt_440a73aff5cf942a6e938f2a696430ea99f969b7
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300893?subseason=952202\nResult: L 3-9\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/45136653?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. Hammers (W 8-5)
+DTSTART:20260212T022000Z
+DTEND:20260212T033500Z
+DTSTAMP:20260424T124237Z
+UID:evt_b3124dfef634ed72d4d14b47e26b8570b7cdeea7
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300893?subseason=952202\nResult: W 8-5\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/45136667?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. RCR Yachts (L 6-7)
+DTSTART:20260219T025000Z
+DTEND:20260219T040500Z
+DTSTAMP:20260424T124237Z
+UID:evt_d492ef3051bc7abfe2e0c5b081e7b579bc275a70
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300893?subseason=952202\nResult: L 6-7\nStatus: Final/OT
+LOCATION:Riverside Rink
+URL:https://www.eriemetrosports.com/game/show/45156262?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. Britesmith (L 6-8)
+DTSTART:20260224T005000Z
+DTEND:20260224T020500Z
+DTSTAMP:20260424T124237Z
+UID:evt_024dc785d513a408ef9509bbfa572c7e2caadb2f
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300893?subseason=952202\nResult: L 6-8\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/45174491?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. Hammers (W 6-4)
+DTSTART:20260304T005000Z
+DTEND:20260304T020500Z
+DTSTAMP:20260424T124237Z
+UID:evt_98520398b4ca43fa404552f6c46d784ef064d554
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300893?subseason=952202\nResult: W 6-4\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/45174668?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. Britesmith (W 8-5)
+DTSTART:20260311T012000Z
+DTEND:20260311T023500Z
+DTSTAMP:20260424T124237Z
+UID:evt_cdda083c542c4d3ba25b24192c2aa3c5f2706c29
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300893?subseason=952202\nResult: W 8-5\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/45185441?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. Visualeyes (W 6-5)
+DTSTART:20260318T012000Z
+DTEND:20260318T023500Z
+DTSTAMP:20260424T124237Z
+UID:evt_a6b4d0cab63b62267c692a847d860125fc67908e
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300893?subseason=952202\nResult: W 6-5\nStatus: Final/OT
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/45185462?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. Britesmith (L 3-4)
+DTSTART:20260324T012000Z
+DTEND:20260324T023500Z
+DTSTAMP:20260424T124237Z
+UID:evt_84817adf9d617684f80ff0a6313d2b50a65eba21
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300893?subseason=952202\nResult: L 3-4\nStatus: FINAL
+LOCATION:Buf St - Semi 1 Classic Div
+URL:https://www.eriemetrosports.com/game/show/45220383?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. Britesmith (W 4-0)
+DTSTART:20260331T012000Z
+DTEND:20260331T023500Z
+DTSTAMP:20260424T124237Z
+UID:evt_4a1d7f3e6f71e90b80db6340f174843f2bce4ba7
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300893?subseason=952202\nResult: W 4-0\nStatus: FINAL
+LOCATION:Buf St - Semi 2 Classic Div
+URL:https://www.eriemetrosports.com/game/show/45220386?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. Britesmith (W 8-5)
+DTSTART:20260408T012000Z
+DTEND:20260408T023500Z
+DTSTAMP:20260424T124237Z
+UID:evt_29ddc9e0142ddf199b9eea2a9d7f1f952a64d41d
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300893?subseason=952202\nResult: W 8-5\nStatus: FINAL
+LOCATION:Buf St - Semi F3 Classic
+URL:https://www.eriemetrosports.com/game/show/45220390?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. Visualeyes (L 0-3)
+DTSTART:20260416T012000Z
+DTEND:20260416T023500Z
+DTSTAMP:20260424T124237Z
+UID:evt_e41c62807f9ce3039ebde698978dc42bebe8d8de
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300893?subseason=952202\nResult: L 0-3\nStatus: FINAL
+LOCATION:Rvside - Finals 1 - Classic
+URL:https://www.eriemetrosports.com/game/show/45412594?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:Audubon North vs. Visualeyes (L 3-8)
+DTSTART:20260422T015000Z
+DTEND:20260422T030500Z
+DTSTAMP:20260424T124237Z
+UID:evt_602fe8d934fbd3a75d993851088530698649a589
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300893?subseason=952202\nResult: L 3-8\nStatus: FINAL
+LOCATION:Rvside - Finals 2 - Classic
+URL:https://www.eriemetrosports.com/game/show/45412599?subseason=952202
 END:VEVENT
 END:VCALENDAR

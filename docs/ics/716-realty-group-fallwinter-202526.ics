@@ -6,207 +6,355 @@ METHOD:PUBLISH
 X-WR-CALNAME:716 Realty Group
 X-WR-TIMEZONE:America/New_York
 BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. Metro Stars (W 10-9)
+DTSTART:20250920T012000Z
+DTEND:20250920T023500Z
+DTSTAMP:20260424T124242Z
+UID:evt_2ea80864e8fd4b99258549e6e991f4797db0c71c
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: W 10-9\nStatus: Final/OT
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/44577996?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. Mitchell's (W 5-1)
+DTSTART:20250922T235000Z
+DTEND:20250923T010500Z
+DTSTAMP:20260424T124242Z
+UID:evt_f1e8d12a421e3a850d4688c9129d07538fe10403
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: W 5-1\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/44578046?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. Five Star Services (W 9-5)
+DTSTART:20250927T012000Z
+DTEND:20250927T023500Z
+DTSTAMP:20260424T124242Z
+UID:evt_d56b5334ed1454898df258a10cc920f91aa2485f
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: W 9-5\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/44641776?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. Byrd House Hawks (W 5-2)
+DTSTART:20251001T012000Z
+DTEND:20251001T023500Z
+DTSTAMP:20260424T124242Z
+UID:evt_d66df702add913627577d385b1c0d362b4fef280
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: W 5-2\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/44666324?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. M&M Forwarding (W 7-6)
+DTSTART:20251008T012000Z
+DTEND:20251008T023500Z
+DTSTAMP:20260424T124242Z
+UID:evt_e960e43bab5d8936ba08008b67980cd1269a3123
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: W 7-6\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/44696025?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. Bear Clause (W 13-4)
+DTSTART:20251018T015000Z
+DTEND:20251018T030500Z
+DTSTAMP:20260424T124242Z
+UID:evt_3ea4c8a7db0855541860ec6264b7a5c46e3912dd
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: W 13-4\nStatus: FINAL
+LOCATION:Riverside Rink
+URL:https://www.eriemetrosports.com/game/show/44696307?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. RCR Yachts (L 4-7)
+DTSTART:20251021T012000Z
+DTEND:20251021T023500Z
+DTSTAMP:20260424T124242Z
+UID:evt_b55dff49cfbd640dfc46786566a4639737bf44c7
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: L 4-7\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/44696323?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. Britesmith (L 2-10)
+DTSTART:20251028T015000Z
+DTEND:20251028T030500Z
+DTSTAMP:20260424T124242Z
+UID:evt_655dfc3525b209b09fb88bd2b8572af429595367
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: L 2-10\nStatus: FINAL
+LOCATION:Riverside Rink
+URL:https://www.eriemetrosports.com/game/show/44696391?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. AM Lumber (L 4-5)
+DTSTART:20251105T025000Z
+DTEND:20251105T040500Z
+DTSTAMP:20260424T124242Z
+UID:evt_f577bb4c5dac747eb19481603b1a691771be4f0d
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: L 4-5\nStatus: FINAL
+LOCATION:Riverside Rink
+URL:https://www.eriemetrosports.com/game/show/44846702?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. M&M Forwarding (L 2-3)
+DTSTART:20251112T022000Z
+DTEND:20251112T033500Z
+DTSTAMP:20260424T124242Z
+UID:evt_caa8b2eaea948d6113716e05efe0e02a8cba444c
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: L 2-3\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/44880696?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. RCR Yachts (L 4-7)
+DTSTART:20251118T025000Z
+DTEND:20251118T040500Z
+DTSTAMP:20260424T124242Z
+UID:evt_fff069454b1fac58047d50572fa166a7683e5173
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: L 4-7\nStatus: FINAL
+LOCATION:Riverside Rink
+URL:https://www.eriemetrosports.com/game/show/44880709?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. Audubon (L 8-11)
+DTSTART:20251125T005000Z
+DTEND:20251125T020500Z
+DTSTAMP:20260424T124242Z
+UID:evt_13e807fa5350f08a845d77f0ec2dfc3ee6555e5f
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: L 8-11\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/44880729?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. Replacements (W 10-8)
+DTSTART:20251203T022000Z
+DTEND:20251203T033500Z
+DTSTAMP:20260424T124242Z
+UID:evt_eac5a5ab4691474dde58f86cd4976c57df901ac1
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: W 10-8\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/44970720?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. RCR Yachts (L 3-4)
+DTSTART:20251209T022000Z
+DTEND:20251209T033500Z
+DTSTAMP:20260424T124242Z
+UID:evt_9f8734d677336e23ac31db3500705647d5fafb39
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: L 3-4\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/44971742?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. M&M Forwarding (L 3-6)
+DTSTART:20251217T025000Z
+DTEND:20251217T040500Z
+DTSTAMP:20260424T124242Z
+UID:evt_8ec8c87492a002a543672926d072e7fb9fec58d1
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: L 3-6\nStatus: FINAL
+LOCATION:Riverside Rink
+URL:https://www.eriemetrosports.com/game/show/44971769?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. Metro Stars (W 14-12)
+DTSTART:20251227T022000Z
+DTEND:20251227T033500Z
+DTSTAMP:20260424T124242Z
+UID:evt_33a1c7711136be6036ce22606a5e8c7962e113ba
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: W 14-12\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/44971825?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. Visualeyes (L 5-13)
+DTSTART:20260109T022000Z
+DTEND:20260109T033500Z
+DTSTAMP:20260424T124242Z
+UID:evt_28900965d5fc76265062819c99413d82f9f6b151
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: L 5-13\nStatus: FINAL
+LOCATION:Cazenovia Rink
+URL:https://www.eriemetrosports.com/game/show/44971869?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. RCR Yachts (L 4-7)
+DTSTART:20260115T022000Z
+DTEND:20260115T033500Z
+DTSTAMP:20260424T124242Z
+UID:evt_a097ee48e2c49b05deb11316c613c064279d5a14
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: L 4-7\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/44971912?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. M&M Forwarding (L 2-5)
+DTSTART:20260122T022000Z
+DTEND:20260122T033500Z
+DTSTAMP:20260424T124242Z
+UID:evt_c980b5df361bc59f49bb0b5f1381d202621aa9c3
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: L 2-5\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/45106004?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. AM Lumber (W 8-7)
+DTSTART:20260129T022000Z
+DTEND:20260129T033500Z
+DTSTAMP:20260424T124242Z
+UID:evt_5731237d61d26761749d1c15fc60f12568c28fef
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: W 8-7\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/45106038?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. Visualeyes (L 1-7)
+DTSTART:20260205T022000Z
+DTEND:20260205T033500Z
+DTSTAMP:20260424T124242Z
+UID:evt_48b8c8124817fdcd11a855fee413980ddf3872df
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: L 1-7\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/45136644?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. Metro Stars (W 9-8)
+DTSTART:20260214T022000Z
+DTEND:20260214T033500Z
+DTSTAMP:20260424T124242Z
+UID:evt_293287d13e1efa2de57ccb3b1b792a8b3db36864
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: W 9-8\nStatus: Final/OT
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/45136678?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. Hammers (L 6-7)
+DTSTART:20260218T022000Z
+DTEND:20260218T033500Z
+DTSTAMP:20260424T124242Z
+UID:evt_72a389f17d2ef0b86553486ee4f9a8904de341cd
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: L 6-7\nStatus: Final/OT
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/45156253?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. Metro Stars (W 13-7)
+DTSTART:20260228T022000Z
+DTEND:20260228T033500Z
+DTSTAMP:20260424T124242Z
+UID:evt_61285cff259342c43b82fb958fb4240eecb3c7ef
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: W 13-7\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/45174516?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. AM Lumber (W 11-6)
+DTSTART:20260307T005000Z
+DTEND:20260307T020500Z
+DTSTAMP:20260424T124242Z
+UID:evt_8f6d02152b490de366ddd50df9b312dfd9cd9f68
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: W 11-6\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/45180874?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. Britesmith (W 3-0)
+DTSTART:20260313T235000Z
+DTEND:20260314T010500Z
+DTSTAMP:20260424T124242Z
+UID:evt_132f7c5134951887308d7ebab4498c4f6368dacb
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: W 3-0\nStatus: FINAL
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/45283167?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. M&M Forwarding (W 6-3)
+DTSTART:20260319T015000Z
+DTEND:20260319T030500Z
+DTSTAMP:20260424T124242Z
+UID:evt_b82c42b28c2040c078984732cb056382922119bd
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: W 6-3\nStatus: FINAL
+LOCATION:Riverside - Semi 1 Adams Div
+URL:https://www.eriemetrosports.com/game/show/45220537?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. M&M Forwarding (L 2-3)
+DTSTART:20260325T012000Z
+DTEND:20260325T023500Z
+DTSTAMP:20260424T124242Z
+UID:evt_ec1b7d35c78b1ce116df7100d28c633ea50a4130
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: L 2-3\nStatus: Final/OT
+LOCATION:Buf St - Semi 2 Adams Div
+URL:https://www.eriemetrosports.com/game/show/45268347?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. M&M Forwarding (W 4-3)
+DTSTART:20260331T235000Z
+DTEND:20260401T010500Z
+DTSTAMP:20260424T124242Z
+UID:evt_b6670df9c0bc84399da6ae2d037964cb0b2e6e88
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: W 4-3\nStatus: FINAL
+LOCATION:Buf St - S3 Adams - If Need
+URL:https://www.eriemetrosports.com/game/show/45292391?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. RCR Yachts (L 2-4)
+DTSTART:20260414T005000Z
+DTEND:20260414T020500Z
+DTSTAMP:20260424T124242Z
+UID:evt_831a1a21db4083f617dbb0d1269555ea3826206b
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: L 2-4\nStatus: FINAL
+LOCATION:Rvside - Finals 1 - Adams Div
+URL:https://www.eriemetrosports.com/game/show/45292416?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. RCR Yachts (W 5-4)
+DTSTART:20260421T005000Z
+DTEND:20260421T020500Z
+DTSTAMP:20260424T124242Z
+UID:evt_6a72de805900f7fc9ac6ab709fcd92464ee66252
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10300900?subseason=952202\nResult: W 5-4\nStatus: Final/OT
+LOCATION:Rvside - Finals 2 - Adams Div
+URL:https://www.eriemetrosports.com/game/show/45387194?subseason=952202
+END:VEVENT
+BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. RCR Yachts (18-8)
 DTSTART:20260428T005000Z
 DTEND:20260428T020500Z
-DTSTAMP:20260424T120549Z
-UID:evt_8d5425f7aab82f7e55a6baa562ae5c1a83ca709c
+DTSTAMP:20260424T124242Z
+UID:evt_d32b78fa2713f32fc548d2efc13b9de05937e7a5
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
+ am_instance/10300900?subseason=952202\nStatus: 8:50 PM EDT
 LOCATION:Rvside - Finals 3 If Need
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. Metro Stars
-DTSTART:20260920T010000Z
-DTEND:20260920T021500Z
-DTSTAMP:20260424T120549Z
-UID:evt_162fea7f57d6b2779a81e2f4b86546753e7450f8
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
-LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. Mitchell's
-DTSTART:20260923T010000Z
-DTEND:20260923T021500Z
-DTSTAMP:20260424T120549Z
-UID:evt_e2ac8dd720e9dbf408b6d0e0c20d1f4f160c3108
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
-LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. Five Star Services
-DTSTART:20260927T010000Z
-DTEND:20260927T021500Z
-DTSTAMP:20260424T120549Z
-UID:evt_7331a4fa39d70821c3e4aa0fd4cfce8d5dddda93
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
-LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. Byrd House Hawks
-DTSTART:20261001T010000Z
-DTEND:20261001T021500Z
-DTSTAMP:20260424T120549Z
-UID:evt_4b1b3de684816d0de8d4f9b7d6a4452c9fabecda
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
-LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. M&M Forwarding
-DTSTART:20261008T010000Z
-DTEND:20261008T021500Z
-DTSTAMP:20260424T120549Z
-UID:evt_94f7b2d16f2ae2ef79000de7d261256255cbbb1b
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
-LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. Bear Clause
-DTSTART:20261018T010000Z
-DTEND:20261018T021500Z
-DTSTAMP:20260424T120549Z
-UID:evt_e093d45a8582465daff7bb5f20d4d27e55054e72
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
-LOCATION:Riverside Rink
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. RCR Yachts
-DTSTART:20261021T010000Z
-DTEND:20261021T021500Z
-DTSTAMP:20260424T120549Z
-UID:evt_48329efbf6e1d7f3fe432414ca1117e58dadf231
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
-LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. Britesmith
-DTSTART:20261028T010000Z
-DTEND:20261028T021500Z
-DTSTAMP:20260424T120549Z
-UID:evt_f203c520005845acba6f511b5d278ad18fd5bdd0
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
-LOCATION:Riverside Rink
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. AM Lumber
-DTSTART:20261105T020000Z
-DTEND:20261105T031500Z
-DTSTAMP:20260424T120549Z
-UID:evt_f736a40cdaeaddd11aa0aa2dab27efeb8b00d8e1
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
-LOCATION:Riverside Rink
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. M&M Forwarding
-DTSTART:20261112T020000Z
-DTEND:20261112T031500Z
-DTSTAMP:20260424T120549Z
-UID:evt_89862a9efa810eaf5420a6e09b4fd48c28f8b37e
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
-LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. RCR Yachts
-DTSTART:20261118T020000Z
-DTEND:20261118T031500Z
-DTSTAMP:20260424T120549Z
-UID:evt_5720be0d50e66afc37674df2c0f37cea735d44a0
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
-LOCATION:Riverside Rink
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. Audubon
-DTSTART:20261125T020000Z
-DTEND:20261125T031500Z
-DTSTAMP:20260424T120549Z
-UID:evt_4b7e83f1e9c442dc4b82fa7abdd95975b7818763
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
-LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. Replacements
-DTSTART:20261203T020000Z
-DTEND:20261203T031500Z
-DTSTAMP:20260424T120549Z
-UID:evt_5361d8ac746ad2107bc2c3dff44f4deea2ee845e
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
-LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. RCR Yachts
-DTSTART:20261209T020000Z
-DTEND:20261209T031500Z
-DTSTAMP:20260424T120549Z
-UID:evt_476608155a959dbf7bdb9665760258611aa397e7
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
-LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. M&M Forwarding
-DTSTART:20261217T020000Z
-DTEND:20261217T031500Z
-DTSTAMP:20260424T120549Z
-UID:evt_664c9e7de03c91106e955c690f2aa04f04512968
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
-LOCATION:Riverside Rink
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. Metro Stars
-DTSTART:20261227T020000Z
-DTEND:20261227T031500Z
-DTSTAMP:20260424T120549Z
-UID:evt_ad19f79f641ccfc69e3f49e5c3a057df08a80e6f
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10300900?subseason=952202
-LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/schedule/team_instance/10300900?subsea
- son=952202
+URL:https://www.eriemetrosports.com/game/show/45387197?subseason=952202
 END:VEVENT
 END:VCALENDAR

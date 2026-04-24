@@ -6,14 +6,12 @@ from loguru import logger
 
 from datetime import datetime
 import re
-import pytz
 
 from src.config import load_config
 from src.scrapers.erie_metro import ErieMetroScraper
 from src.scrapers.rinks_harborcenter import HarborcenterScraper
 from src.utils.events import Event
 from src.utils.ics import build_ics
-import asyncio
 
 
 def slugify(name: str) -> str:
@@ -25,7 +23,7 @@ def slugify(name: str) -> str:
 
 
 def collect_events(urls: List[str], timezone: str, team_name: str | None = None) -> List[Event]:
-    scrapers = [ErieMetroScraper(team_name=team_name), HarborcenterScraper()]
+    scrapers = [ErieMetroScraper(team_name=team_name), HarborcenterScraper(team_name=team_name)]
     events: List[Event] = []
 
     for url in urls:
@@ -49,8 +47,6 @@ def build_team_feeds() -> None:
     config = load_config()
 
     timezone = config.timezone
-    tz = pytz.timezone(timezone)
-    now = datetime.now(tz)
 
     docs = Path("docs/ics")
     docs.mkdir(parents=True, exist_ok=True)
@@ -76,10 +72,16 @@ def build_team_feeds() -> None:
             if team.active and season.active:
                 # Generate fresh ICS for active teams
                 events: List[Event] = collect_events(team.urls, timezone, team_name=team.name)
-                events = [e for e in events if e.start >= now]
-                # dedupe - normalize location for better deduplication
+                # Dedupe with source IDs when available so the same game can move from
+                # "schedule" to "scores" without creating a second calendar event.
                 unique_map = {}
                 for e in events:
+                    if e.external_id:
+                        key = e.external_id
+                        if key not in unique_map:
+                            unique_map[key] = e
+                        continue
+
                     # Create a normalized version for deduplication
                     normalized_location = ""
                     if e.location:
