@@ -5,4 +5,15 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Golden Retrievers
 X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+SUMMARY:Buffalo Cigars vs. Golden Retrievers
+DTSTART:20260427T231500Z
+DTEND:20260428T003000Z
+DTSTAMP:20260424T052652Z
+UID:evt_213bec223debd76acc72834b1b5cc66ca9a0adec
+DESCRIPTION:Auto-imported from https://www.rinksatharborcenter.com/stats#/
+ 1367/team/589011/schedule
+LOCATION:LECOM Harborcenter - Rink 2
+URL:https://www.rinksatharborcenter.com/stats#/1367/team/589011/schedule
+END:VEVENT
 END:VCALENDAR
