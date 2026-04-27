@@ -9,7 +9,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Hammers (W 5-3)
 DTSTART:20250918T012000Z
 DTEND:20250918T023500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_b142d4916195466471f4e81a406430304a8ca6b3
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 5-3\nStatus: FINAL
@@ -20,7 +20,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Visualeyes (W 8-3)
 DTSTART:20250925T012000Z
 DTEND:20250925T023500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_9ce5234e2edcdc9e0b7c55183c1238900a677f05
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 8-3\nStatus: FINAL
@@ -31,7 +31,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. RCR Yachts (L 2-3)
 DTSTART:20250930T012000Z
 DTEND:20250930T023500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_fd9ddc2d1b8db4af7c158e204641110dc74686e3
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: L 2-3\nStatus: FINAL
@@ -42,7 +42,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Britesmith (W 7-4)
 DTSTART:20251007T015000Z
 DTEND:20251007T030500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_889cda38e0260f9f2df7f6bc86db584e70278d17
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 7-4\nStatus: FINAL
@@ -53,7 +53,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Five Star Services (W 7-4)
 DTSTART:20251016T015000Z
 DTEND:20251016T030500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_c70c2835c311b19ce2ae94c8df05772809ea6ee7
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 7-4\nStatus: FINAL
@@ -64,7 +64,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Visualeyes (W 7-4)
 DTSTART:20251024T013500Z
 DTEND:20251024T025000Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_f9e459625bfe93ee92551052817a52f7ac140c3f
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 7-4\nStatus: FINAL
@@ -75,7 +75,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. M&M Forwarding (W 4-3)
 DTSTART:20251029T015000Z
 DTEND:20251029T030500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_a887f670b5042cabc654afb51ed07aaf27b1d462
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 4-3\nStatus: Final/OT
@@ -86,7 +86,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. AM Lumber (W 6-1)
 DTSTART:20251106T025000Z
 DTEND:20251106T040500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_adc2b741bfeb0f9e4d04443d400400749f560cb6
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 6-1\nStatus: FINAL
@@ -97,7 +97,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. AM Lumber (W 11-4)
 DTSTART:20251114T032000Z
 DTEND:20251114T043500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_c93e3f2748d1c4e8af065cafb924995b5be32b07
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 11-4\nStatus: FINAL
@@ -108,7 +108,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Britesmith (W 4-3)
 DTSTART:20251120T022000Z
 DTEND:20251120T033500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_aec1d9ac7771a4bfb7d0de155d25959ca9bab9b3
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 4-3\nStatus: FINAL
@@ -119,7 +119,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. 716 Realty Group (W 11-8)
 DTSTART:20251125T005000Z
 DTEND:20251125T020500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_13e807fa5350f08a845d77f0ec2dfc3ee6555e5f
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 11-8\nStatus: FINAL
@@ -130,7 +130,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Visualeyes (L 1-5)
 DTSTART:20251205T032000Z
 DTEND:20251205T043500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_d03730780f560f763c0d00148e8b4b8b08c6bc6e
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: L 1-5\nStatus: FINAL
@@ -141,7 +141,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Hammers (W 7-3)
 DTSTART:20251211T022000Z
 DTEND:20251211T033500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_769690cca4ca4ace8b9bd12a710839e3cec29fd3
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 7-3\nStatus: FINAL
@@ -152,7 +152,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Bear Clause (L 6-10)
 DTSTART:20251218T022000Z
 DTEND:20251218T033500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_2bea8b4170b56f109050bdef57ee8881400af001
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: L 6-10\nStatus: FINAL
@@ -163,7 +163,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Visualeyes (W 5-4)
 DTSTART:20251224T025000Z
 DTEND:20251224T040500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_e9f724d1a25f64e9754ba02b94ec91e00626aec1
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 5-4\nStatus: FINAL
@@ -174,7 +174,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. RCR Yachts (W 5-2)
 DTSTART:20260106T022000Z
 DTEND:20260106T033500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_e3feec3c032e543a4a468708b5795a56b1606c5d
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 5-2\nStatus: FINAL
@@ -185,7 +185,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Hammers (W 7-5)
 DTSTART:20260114T025000Z
 DTEND:20260114T040500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_d30e694dab19a83aab8c6e00f24c124d1531bc1e
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 7-5\nStatus: FINAL
@@ -196,7 +196,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Visualeyes (W 5-4)
 DTSTART:20260128T025000Z
 DTEND:20260128T040500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_1f9e870e0964523ce0c890c446f0c7d7dfab779d
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 5-4\nStatus: FINAL
@@ -207,7 +207,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. RCR Yachts (W 2-1)
 DTSTART:20260203T022000Z
 DTEND:20260203T033500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_7ea4b934e1c4605fbca5b30048952ec593a6bcd1
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 2-1\nStatus: FINAL
@@ -218,7 +218,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Hammers (L 3-9)
 DTSTART:20260207T022000Z
 DTEND:20260207T033500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_440a73aff5cf942a6e938f2a696430ea99f969b7
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: L 3-9\nStatus: FINAL
@@ -229,7 +229,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Hammers (W 8-5)
 DTSTART:20260212T022000Z
 DTEND:20260212T033500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_b3124dfef634ed72d4d14b47e26b8570b7cdeea7
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 8-5\nStatus: FINAL
@@ -240,7 +240,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. RCR Yachts (L 6-7)
 DTSTART:20260219T025000Z
 DTEND:20260219T040500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_d492ef3051bc7abfe2e0c5b081e7b579bc275a70
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: L 6-7\nStatus: Final/OT
@@ -251,7 +251,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Britesmith (L 6-8)
 DTSTART:20260224T005000Z
 DTEND:20260224T020500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_024dc785d513a408ef9509bbfa572c7e2caadb2f
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: L 6-8\nStatus: FINAL
@@ -262,7 +262,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Hammers (W 6-4)
 DTSTART:20260304T005000Z
 DTEND:20260304T020500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_98520398b4ca43fa404552f6c46d784ef064d554
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 6-4\nStatus: FINAL
@@ -273,7 +273,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Britesmith (W 8-5)
 DTSTART:20260311T012000Z
 DTEND:20260311T023500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_cdda083c542c4d3ba25b24192c2aa3c5f2706c29
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 8-5\nStatus: FINAL
@@ -284,7 +284,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Visualeyes (W 6-5)
 DTSTART:20260318T012000Z
 DTEND:20260318T023500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_a6b4d0cab63b62267c692a847d860125fc67908e
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 6-5\nStatus: Final/OT
@@ -295,7 +295,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Britesmith (L 3-4)
 DTSTART:20260324T012000Z
 DTEND:20260324T023500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_84817adf9d617684f80ff0a6313d2b50a65eba21
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: L 3-4\nStatus: FINAL
@@ -306,7 +306,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Britesmith (W 4-0)
 DTSTART:20260331T012000Z
 DTEND:20260331T023500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_4a1d7f3e6f71e90b80db6340f174843f2bce4ba7
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 4-0\nStatus: FINAL
@@ -317,7 +317,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Britesmith (W 8-5)
 DTSTART:20260408T012000Z
 DTEND:20260408T023500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_29ddc9e0142ddf199b9eea2a9d7f1f952a64d41d
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: W 8-5\nStatus: FINAL
@@ -328,7 +328,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Visualeyes (L 0-3)
 DTSTART:20260416T012000Z
 DTEND:20260416T023500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_e41c62807f9ce3039ebde698978dc42bebe8d8de
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: L 0-3\nStatus: FINAL
@@ -339,7 +339,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Visualeyes (L 3-8)
 DTSTART:20260422T015000Z
 DTEND:20260422T030500Z
-DTSTAMP:20260427T054451Z
+DTSTAMP:20260427T161706Z
 UID:evt_602fe8d934fbd3a75d993851088530698649a589
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10300893?subseason=952202\nResult: L 3-8\nStatus: FINAL
