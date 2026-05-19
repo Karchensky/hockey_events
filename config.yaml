@@ -1,10 +1,19 @@
 timezone: America/New_York
 
 seasons:
+  - id: summer-2026
+    name: Summer 2026
+    start: 2026-06-01
+    active: true
+    teams:
+      - id: 716-realty-group-summer-2026
+        name: 716 Realty Group
+        urls:
+          - https://www.eriemetrosports.com/schedule/team_instance/10555606?subseason=962034
   - id: fall-winter-2025-26
     name: Fall/Winter 2025/26
     start: 2025-09-01
-    active: true
+    active: false
     teams:
       - id: golden-retrievers-fw-2025-26
         name: Golden Retrievers
