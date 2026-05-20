@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Hockey Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Golden Retrievers
+X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+SUMMARY:Lumber Lions vs. The Golden Retrievers
+DTSTART:20260610T002000Z
+DTEND:20260610T013500Z
+DTSTAMP:20260520T170106Z
+UID:evt_df08f3d534806722363cb09baf2b1d04c318ffbb
+DESCRIPTION:Auto-imported from https://bondsports.co/activity/programs/202
+ 6-spring%2Fsummer-hahl/13845/season/2026-spring%2Fsummer-weekday/109146/co
+ mpetition?tab=schedule\nStatus: Scheduled
+LOCATION:Rink 2\, LECOM Harborcenter
+URL:https://bondsports.co/activity/programs/2026-spring%2Fsummer-hahl/1384
+ 5/season/2026-spring%2Fsummer-weekday/109146/competition?tab=schedule
+END:VEVENT
+END:VCALENDAR

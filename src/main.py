@@ -8,6 +8,7 @@ from datetime import datetime
 import re
 
 from src.config import load_config
+from src.scrapers.bond_sports import BondSportsScraper
 from src.scrapers.erie_metro import ErieMetroScraper
 from src.scrapers.rinks_harborcenter import HarborcenterScraper
 from src.utils.events import Event
@@ -23,7 +24,7 @@ def slugify(name: str) -> str:
 
 
 def collect_events(urls: List[str], timezone: str, team_name: str | None = None) -> List[Event]:
-    scrapers = [ErieMetroScraper(team_name=team_name), HarborcenterScraper(team_name=team_name)]
+    scrapers = [BondSportsScraper(team_name=team_name), ErieMetroScraper(team_name=team_name), HarborcenterScraper(team_name=team_name)]
     events: List[Event] = []
 
     for url in urls:

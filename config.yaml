@@ -6,6 +6,10 @@ seasons:
     start: 2026-06-01
     active: true
     teams:
+      - id: golden-retrievers-summer-2026
+        name: Golden Retrievers
+        urls:
+          - https://bondsports.co/activity/programs/2026-spring%2Fsummer-hahl/13845/season/2026-spring%2Fsummer-weekday/109146/competition?tab=schedule
       - id: 716-realty-group-summer-2026
         name: 716 Realty Group
         urls:
