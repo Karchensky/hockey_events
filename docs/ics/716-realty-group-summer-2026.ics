@@ -9,7 +9,7 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. Ham Sub Club (W 10-2)
 DTSTART:20260514T005000Z
 DTEND:20260514T020500Z
-DTSTAMP:20260615T084710Z
+DTSTAMP:20260615T185847Z
 UID:evt_8d9e00a9239577a32036952cd1e052a080560469
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10555606?subseason=962034\nResult: W 10-2\nStatus: FINAL
@@ -20,7 +20,7 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. Bear Clause (W 5-2)
 DTSTART:20260521T005000Z
 DTEND:20260521T020500Z
-DTSTAMP:20260615T084710Z
+DTSTAMP:20260615T185847Z
 UID:evt_d50f100e3e62612076c40d2d12f98f62eeab2cb9
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10555606?subseason=962034\nResult: W 5-2\nStatus: FINAL
@@ -31,7 +31,7 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. Byrd House (W 9-6)
 DTSTART:20260527T005000Z
 DTEND:20260527T020500Z
-DTSTAMP:20260615T084710Z
+DTSTAMP:20260615T185847Z
 UID:evt_ee9f558dfad100bb0ce5389ba361de80d238b4bf
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10555606?subseason=962034\nResult: W 9-6\nStatus: FINAL
@@ -42,7 +42,7 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. Ham Sub Club (W 5-4)
 DTSTART:20260603T005000Z
 DTEND:20260603T020500Z
-DTSTAMP:20260615T084710Z
+DTSTAMP:20260615T185847Z
 UID:evt_cd1df90ad949ee018b2fe739d2fa2731217feaad
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10555606?subseason=962034\nResult: W 5-4\nStatus: FINAL
@@ -53,7 +53,7 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. Bear Clause
 DTSTART:20260612T005000Z
 DTEND:20260612T020500Z
-DTSTAMP:20260615T084710Z
+DTSTAMP:20260615T185847Z
 UID:evt_2a2d69f6307c0f318d040e5192d9306b6e8f10cf
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10555606?subseason=962034\nStatus: 8:50 PM EDT
@@ -64,7 +64,7 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. Woody's Five Star
 DTSTART:20260617T005000Z
 DTEND:20260617T020500Z
-DTSTAMP:20260615T084710Z
+DTSTAMP:20260615T185847Z
 UID:evt_ce6608d5290857a6ac4ce38a989bc2bde6d6abfa
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10555606?subseason=962034\nStatus: 8:50 PM EDT
@@ -75,7 +75,7 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. Metro Stars
 DTSTART:20260625T005000Z
 DTEND:20260625T020500Z
-DTSTAMP:20260615T084710Z
+DTSTAMP:20260615T185847Z
 UID:evt_f5b3de1cef2692ada0076be2fabffd7dcc716ed2
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10555606?subseason=962034\nStatus: 8:50 PM EDT
