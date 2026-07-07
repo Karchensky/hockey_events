@@ -7,6 +7,7 @@ from urllib.parse import urljoin
 
 from bs4 import BeautifulSoup, Tag
 from playwright.sync_api import Page, sync_playwright
+from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 
 from src.scrapers.base import Scraper
 from src.utils.events import Event, guess_end, localize
@@ -31,11 +32,21 @@ class HarborcenterScraper(Scraper):
 
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True)
-            page = browser.new_page()
 
             for page_url in self._target_urls(url):
-                html = self._render_page(page, page_url)
-                pages.append((page_url, html))
+                # Render each tab in a fresh page. The schedule/scores URLs
+                # differ only by the hash fragment, so reusing one page turns
+                # the second navigation into a same-document (hash-only) change:
+                # it doesn't reload, networkidle returns immediately, and the
+                # SPA intermittently failed to re-render the new tab in time,
+                # dropping every row. A fresh page forces a full load that boots
+                # the SPA against the correct hash every time.
+                page = browser.new_page()
+                try:
+                    html = self._render_page(page, page_url)
+                    pages.append((page_url, html))
+                finally:
+                    page.close()
 
             browser.close()
 
@@ -64,7 +75,15 @@ class HarborcenterScraper(Scraper):
 
     def _render_page(self, page: Page, url: str) -> str:
         page.goto(url, wait_until="networkidle", timeout=60000)
-        page.wait_for_timeout(2500)
+        # Wait for an actual game row (with its screen-reader label) to render
+        # instead of sleeping a fixed interval. A page that genuinely has no
+        # games will time out here and fall through with zero rows, which is
+        # correct; a slow render no longer silently yields an empty table.
+        try:
+            page.wait_for_selector("tr[role='article'] div.sr-only", timeout=20000)
+        except PlaywrightTimeoutError:
+            pass
+        page.wait_for_timeout(1000)
         self._load_all_rows(page)
         return page.content()
 
