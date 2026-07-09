@@ -9,7 +9,7 @@ BEGIN:VEVENT
 SUMMARY:The Golden Retrievers vs. Lumber Lions (4-7)
 DTSTART:20260610T002000Z
 DTEND:20260610T013500Z
-DTSTAMP:20260709T064305Z
+DTSTAMP:20260709T171114Z
 UID:evt_7672e179f7afe1e5a231702d70af9fc094223bc4
 DESCRIPTION:Auto-imported from https://www.rinksatharborcenter.com/stats#/
  1367/team/681628/scores\nStatus: Final\nScore: 4-7
@@ -20,7 +20,7 @@ BEGIN:VEVENT
 SUMMARY:The Golden Retrievers vs. Rivermen (2-5)
 DTSTART:20260619T024000Z
 DTEND:20260619T035500Z
-DTSTAMP:20260709T064305Z
+DTSTAMP:20260709T171114Z
 UID:evt_35deb4f911e2192e8b6fb40ae98e4f97452ee6f2
 DESCRIPTION:Auto-imported from https://www.rinksatharborcenter.com/stats#/
  1367/team/681628/scores\nStatus: Final\nScore: 2-5
@@ -31,7 +31,7 @@ BEGIN:VEVENT
 SUMMARY:Tioga Tavern vs. The Golden Retrievers (4-6)
 DTSTART:20260702T002000Z
 DTEND:20260702T013500Z
-DTSTAMP:20260709T064305Z
+DTSTAMP:20260709T171114Z
 UID:evt_98eea2f57b73a166140c7411863121b7383d8312
 DESCRIPTION:Auto-imported from https://www.rinksatharborcenter.com/stats#/
  1367/team/681628/scores\nStatus: Final\nScore: 4-6
@@ -39,13 +39,13 @@ LOCATION:Rink 2
 URL:https://www.rinksatharborcenter.com/stats#/1367/team/681628/scores
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Big Kats Kittens vs. The Golden Retrievers
+SUMMARY:Big Kats Kittens vs. The Golden Retrievers (4-3)
 DTSTART:20260708T234500Z
 DTEND:20260709T010000Z
-DTSTAMP:20260709T064305Z
+DTSTAMP:20260709T171114Z
 UID:evt_7b2c494caaf089c5d2dd54334770c8bb58b08190
 DESCRIPTION:Auto-imported from https://www.rinksatharborcenter.com/stats#/
- 1367/team/681628/scores\nStatus: Preview
+ 1367/team/681628/scores\nStatus: Final\nScore: 4-3
 LOCATION:Rink 2
 URL:https://www.rinksatharborcenter.com/stats#/1367/team/681628/scores
 END:VEVENT
@@ -53,7 +53,7 @@ BEGIN:VEVENT
 SUMMARY:Tall Boys Love Em vs. The Golden Retrievers
 DTSTART:20260714T004500Z
 DTEND:20260714T020000Z
-DTSTAMP:20260709T064305Z
+DTSTAMP:20260709T171114Z
 UID:evt_049d770b87ccab22dac948a0909cbb787de95a3c
 DESCRIPTION:Auto-imported from https://www.rinksatharborcenter.com/stats#/
  1367/team/681628/schedule\nStatus: Preview
@@ -64,7 +64,7 @@ BEGIN:VEVENT
 SUMMARY:Lumber Lions vs. The Golden Retrievers
 DTSTART:20260717T024000Z
 DTEND:20260717T035500Z
-DTSTAMP:20260709T064305Z
+DTSTAMP:20260709T171114Z
 UID:evt_15434c9286ba1c093c68d1c8cd2e49e07d2be1ef
 DESCRIPTION:Auto-imported from https://www.rinksatharborcenter.com/stats#/
  1367/team/681628/schedule\nStatus: Preview
@@ -75,7 +75,7 @@ BEGIN:VEVENT
 SUMMARY:The Golden Retrievers vs. Tioga Tavern
 DTSTART:20260723T013000Z
 DTEND:20260723T024500Z
-DTSTAMP:20260709T064305Z
+DTSTAMP:20260709T171114Z
 UID:evt_843fe1343b558a9bcae4df6b4a874d4042c473ad
 DESCRIPTION:Auto-imported from https://www.rinksatharborcenter.com/stats#/
  1367/team/681628/schedule\nStatus: Preview
@@ -86,7 +86,7 @@ BEGIN:VEVENT
 SUMMARY:The Golden Retrievers vs. Tall Boys Love Em
 DTSTART:20260728T004500Z
 DTEND:20260728T020000Z
-DTSTAMP:20260709T064305Z
+DTSTAMP:20260709T171114Z
 UID:evt_6afeeeefc9a8e03c81626b107d0242066726f048
 DESCRIPTION:Auto-imported from https://www.rinksatharborcenter.com/stats#/
  1367/team/681628/schedule\nStatus: Preview
@@ -97,7 +97,7 @@ BEGIN:VEVENT
 SUMMARY:Lumber Lions vs. The Golden Retrievers
 DTSTART:20260807T013000Z
 DTEND:20260807T024500Z
-DTSTAMP:20260709T064305Z
+DTSTAMP:20260709T171114Z
 UID:evt_33c4dc83de64a2289fc9d04972bf5a9c77035680
 DESCRIPTION:Auto-imported from https://www.rinksatharborcenter.com/stats#/
  1367/team/681628/schedule\nStatus: Preview
