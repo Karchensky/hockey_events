@@ -1,6 +1,15 @@
 timezone: America/New_York
 
 seasons:
+  - id: fall-winter-2026-27
+    name: Fall/Winter 2026/27
+    start: 2026-09-01
+    active: true
+    teams:
+      - id: golden-retrievers-fallwinter-202627
+        name: Golden Retrievers
+        urls:
+          - https://www.rinksatharborcenter.com/stats#/1367/team/717325/schedule
   - id: summer-2026
     name: Summer 2026
     start: 2026-06-01

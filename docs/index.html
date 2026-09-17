@@ -1,43 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Team Calendar Subscriptions</title>
-  <style>
-    body { font-family: 'Borda', 'Borda Regular', sans-serif; line-height: 1.5; margin: 24px; }
-    h1 { margin-bottom: 8px; }
-    h2 { margin-top: 24px; }
-    ul { padding-left: 20px; }
-    code { background: #f4f4f4; padding: 2px 4px; border-radius: 4px; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Subscribe to your hockey team's schedule in Apple or Google Calendar. Current and past seasons, with step-by-step setup for iPhone and Android.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://karchensky.github.io/hockey_events/">
+  <link rel="icon" type="image/svg+xml" href="assets/calendar.svg">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+  <title>Hockey Events | Team Calendars</title>
 </head>
 <body>
-  <h1>Team Calendar Subscriptions</h1>
-  <h2>Summer 2026</h2>
-<ul>
-<li><a href="ics/golden-retrievers-summer-2026.ics">Golden Retrievers</a></li>
-<li><a href="ics/716-realty-group-summer-2026.ics">716 Realty Group</a></li>
-</ul><h2>Fall/Winter 2025/26</h2>
-<ul>
-<li><a href="ics/golden-retrievers-fallwinter-202526.ics">Golden Retrievers</a></li>
-<li><a href="ics/audubon-north-fallwinter-202526.ics">Audubon North</a></li>
-<li><a href="ics/716-realty-group-fallwinter-202526.ics">716 Realty Group</a></li>
-</ul><h2>Summer 2025</h2>
-<ul>
-<li><a href="ics/audubon-north-summer-2025.ics">Audubon North</a></li>
-<li><a href="ics/golden-retrievers-summer-2025.ics">Golden Retrievers</a></li>
-</ul>
+  <a class="skip-link" href="#calendars">Skip to calendars</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="wordmark" href="./" aria-label="Hockey Events home"><img src="assets/calendar.svg" alt="" width="32" height="32"><span>Hockey Events</span></a>
+      <nav aria-label="Main navigation"><a href="#calendars">Calendars</a><a href="#instructions">Setup help</a></nav>
+    </div>
+  </header>
+  <main class="page-shell">
+    <div class="page-heading">
+      <p class="eyebrow">Team calendar subscriptions</p>
+      <h1>Hockey Events</h1>
+      <p>Your team's schedule, in your calendar.</p>
+    </div>
+    <div id="calendars" class="calendars" tabindex="-1">
 
-  <h2>Subscribe</h2>
-  <p><strong>Apple (iPhone/iPad):</strong> Tap a team link above and choose Subscribe. Or go to Settings → Calendar → Accounts → Add Subscribed Calendar and paste the URL.</p>
-  <p><strong>Android (Google Calendar):</strong> Use Google Calendar on the web: Other calendars → From URL → paste the team URL → Add. Then ensure it’s visible and set to Sync in the app. Tapping the link on Android typically downloads a file (one-time import) and won’t auto-update.</p>
+    <section class="current-season" aria-labelledby="current-season-title">
+      <div class="section-heading">
+        <h2 id="current-season-title">Fall/Winter 2026/27</h2>
+        <span class="season-status">Current season</span>
+      </div>
+      <ul class="team-list">
+      <li class="team-row">
+        <div class="team-info">
+          <h3>Golden Retrievers</h3>
+          <div class="team-links"><a href="https://www.rinksatharborcenter.com/stats#/1367/team/717325/schedule" target="_blank" rel="noopener noreferrer">League schedule <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#external-link"></use></svg></a>
+            <a href="https://karchensky.github.io/hockey_events/ics/golden-retrievers-fallwinter-202627.ics" aria-label="Golden Retrievers - Fall/Winter 2026/27: calendar feed, one-time download">Calendar feed (.ics)</a>
+          </div>
+        </div>
+        <div class="team-actions">
+          <a class="button button-primary" href="webcal://karchensky.github.io/hockey_events/ics/golden-retrievers-fallwinter-202627.ics" aria-label="Subscribe to Golden Retrievers - Fall/Winter 2026/27 in Apple Calendar">
+            <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#calendar-plus"></use></svg> Apple Calendar
+          </a>
+          <a class="button button-secondary" href="#instructions" data-setup-feed="https://karchensky.github.io/hockey_events/ics/golden-retrievers-fallwinter-202627.ics"
+             aria-label="Set up Golden Retrievers - Fall/Winter 2026/27 in Google Calendar"><svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#calendar-days"></use></svg> Google / Android</a>
+        </div>
+      </li></ul>
+      <p class="season-note"><svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#info"></use></svg><span><strong>New season, new subscription.</strong>
+        Add this season even if you already follow last season's calendar.</span></p>
+    </section>
+    <details class="past-season">
+      <summary><span>Summer 2026</span><span class="season-count">2 teams</span></summary>
+      <ul class="team-list">
+      <li class="team-row">
+        <div class="team-info">
+          <h3>Golden Retrievers</h3>
+          <div class="team-links"><a href="https://www.rinksatharborcenter.com/stats#/1367/team/681628/schedule" target="_blank" rel="noopener noreferrer">League schedule <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#external-link"></use></svg></a>
+            <a href="https://karchensky.github.io/hockey_events/ics/golden-retrievers-summer-2026.ics" aria-label="Golden Retrievers - Summer 2026: calendar feed, one-time download">Calendar feed (.ics)</a>
+          </div>
+        </div>
+        <div class="team-actions">
+          <a class="button button-primary" href="webcal://karchensky.github.io/hockey_events/ics/golden-retrievers-summer-2026.ics" aria-label="Subscribe to Golden Retrievers - Summer 2026 in Apple Calendar">
+            <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#calendar-plus"></use></svg> Apple Calendar
+          </a>
+          <a class="button button-secondary" href="#instructions" data-setup-feed="https://karchensky.github.io/hockey_events/ics/golden-retrievers-summer-2026.ics"
+             aria-label="Set up Golden Retrievers - Summer 2026 in Google Calendar"><svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#calendar-days"></use></svg> Google / Android</a>
+        </div>
+      </li>
+      <li class="team-row">
+        <div class="team-info">
+          <h3>716 Realty Group</h3>
+          <div class="team-links"><a href="https://www.eriemetrosports.com/schedule/team_instance/10555606?subseason=962034" target="_blank" rel="noopener noreferrer">League schedule <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#external-link"></use></svg></a>
+            <a href="https://karchensky.github.io/hockey_events/ics/716-realty-group-summer-2026.ics" aria-label="716 Realty Group - Summer 2026: calendar feed, one-time download">Calendar feed (.ics)</a>
+          </div>
+        </div>
+        <div class="team-actions">
+          <a class="button button-primary" href="webcal://karchensky.github.io/hockey_events/ics/716-realty-group-summer-2026.ics" aria-label="Subscribe to 716 Realty Group - Summer 2026 in Apple Calendar">
+            <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#calendar-plus"></use></svg> Apple Calendar
+          </a>
+          <a class="button button-secondary" href="#instructions" data-setup-feed="https://karchensky.github.io/hockey_events/ics/716-realty-group-summer-2026.ics"
+             aria-label="Set up 716 Realty Group - Summer 2026 in Google Calendar"><svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#calendar-days"></use></svg> Google / Android</a>
+        </div>
+      </li></ul>
+    </details>
+    <details class="past-season">
+      <summary><span>Fall/Winter 2025/26</span><span class="season-count">3 teams</span></summary>
+      <ul class="team-list">
+      <li class="team-row">
+        <div class="team-info">
+          <h3>Golden Retrievers</h3>
+          <div class="team-links"><a href="https://www.rinksatharborcenter.com/stats#/1367/team/589011/schedule" target="_blank" rel="noopener noreferrer">League schedule <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#external-link"></use></svg></a>
+            <a href="https://karchensky.github.io/hockey_events/ics/golden-retrievers-fallwinter-202526.ics" aria-label="Golden Retrievers - Fall/Winter 2025/26: calendar feed, one-time download">Calendar feed (.ics)</a>
+          </div>
+        </div>
+        <div class="team-actions">
+          <a class="button button-primary" href="webcal://karchensky.github.io/hockey_events/ics/golden-retrievers-fallwinter-202526.ics" aria-label="Subscribe to Golden Retrievers - Fall/Winter 2025/26 in Apple Calendar">
+            <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#calendar-plus"></use></svg> Apple Calendar
+          </a>
+          <a class="button button-secondary" href="#instructions" data-setup-feed="https://karchensky.github.io/hockey_events/ics/golden-retrievers-fallwinter-202526.ics"
+             aria-label="Set up Golden Retrievers - Fall/Winter 2025/26 in Google Calendar"><svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#calendar-days"></use></svg> Google / Android</a>
+        </div>
+      </li>
+      <li class="team-row">
+        <div class="team-info">
+          <h3>Audubon North</h3>
+          <div class="team-links"><a href="https://www.eriemetrosports.com/schedule/team_instance/10300893?subseason=952202" target="_blank" rel="noopener noreferrer">League schedule <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#external-link"></use></svg></a>
+            <a href="https://karchensky.github.io/hockey_events/ics/audubon-north-fallwinter-202526.ics" aria-label="Audubon North - Fall/Winter 2025/26: calendar feed, one-time download">Calendar feed (.ics)</a>
+          </div>
+        </div>
+        <div class="team-actions">
+          <a class="button button-primary" href="webcal://karchensky.github.io/hockey_events/ics/audubon-north-fallwinter-202526.ics" aria-label="Subscribe to Audubon North - Fall/Winter 2025/26 in Apple Calendar">
+            <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#calendar-plus"></use></svg> Apple Calendar
+          </a>
+          <a class="button button-secondary" href="#instructions" data-setup-feed="https://karchensky.github.io/hockey_events/ics/audubon-north-fallwinter-202526.ics"
+             aria-label="Set up Audubon North - Fall/Winter 2025/26 in Google Calendar"><svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#calendar-days"></use></svg> Google / Android</a>
+        </div>
+      </li>
+      <li class="team-row">
+        <div class="team-info">
+          <h3>716 Realty Group</h3>
+          <div class="team-links"><a href="https://www.eriemetrosports.com/schedule/team_instance/10300900?subseason=952202" target="_blank" rel="noopener noreferrer">League schedule <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#external-link"></use></svg></a>
+            <a href="https://karchensky.github.io/hockey_events/ics/716-realty-group-fallwinter-202526.ics" aria-label="716 Realty Group - Fall/Winter 2025/26: calendar feed, one-time download">Calendar feed (.ics)</a>
+          </div>
+        </div>
+        <div class="team-actions">
+          <a class="button button-primary" href="webcal://karchensky.github.io/hockey_events/ics/716-realty-group-fallwinter-202526.ics" aria-label="Subscribe to 716 Realty Group - Fall/Winter 2025/26 in Apple Calendar">
+            <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#calendar-plus"></use></svg> Apple Calendar
+          </a>
+          <a class="button button-secondary" href="#instructions" data-setup-feed="https://karchensky.github.io/hockey_events/ics/716-realty-group-fallwinter-202526.ics"
+             aria-label="Set up 716 Realty Group - Fall/Winter 2025/26 in Google Calendar"><svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#calendar-days"></use></svg> Google / Android</a>
+        </div>
+      </li></ul>
+    </details>
+    <details class="past-season">
+      <summary><span>Summer 2025</span><span class="season-count">2 teams</span></summary>
+      <ul class="team-list">
+      <li class="team-row">
+        <div class="team-info">
+          <h3>Audubon North</h3>
+          <div class="team-links"><a href="https://www.eriemetrosports.com/schedule/team_instance/10191173?subseason=945400" target="_blank" rel="noopener noreferrer">League schedule <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#external-link"></use></svg></a>
+            <a href="https://karchensky.github.io/hockey_events/ics/audubon-north-summer-2025.ics" aria-label="Audubon North - Summer 2025: calendar feed, one-time download">Calendar feed (.ics)</a>
+          </div>
+        </div>
+        <div class="team-actions">
+          <a class="button button-primary" href="webcal://karchensky.github.io/hockey_events/ics/audubon-north-summer-2025.ics" aria-label="Subscribe to Audubon North - Summer 2025 in Apple Calendar">
+            <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#calendar-plus"></use></svg> Apple Calendar
+          </a>
+          <a class="button button-secondary" href="#instructions" data-setup-feed="https://karchensky.github.io/hockey_events/ics/audubon-north-summer-2025.ics"
+             aria-label="Set up Audubon North - Summer 2025 in Google Calendar"><svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#calendar-days"></use></svg> Google / Android</a>
+        </div>
+      </li>
+      <li class="team-row">
+        <div class="team-info">
+          <h3>Golden Retrievers</h3>
+          <div class="team-links"><a href="https://www.rinksatharborcenter.com/stats#/1367/team/549836/schedule" target="_blank" rel="noopener noreferrer">League schedule <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#external-link"></use></svg></a>
+            <a href="https://karchensky.github.io/hockey_events/ics/golden-retrievers-summer-2025.ics" aria-label="Golden Retrievers - Summer 2025: calendar feed, one-time download">Calendar feed (.ics)</a>
+          </div>
+        </div>
+        <div class="team-actions">
+          <a class="button button-primary" href="webcal://karchensky.github.io/hockey_events/ics/golden-retrievers-summer-2025.ics" aria-label="Subscribe to Golden Retrievers - Summer 2025 in Apple Calendar">
+            <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#calendar-plus"></use></svg> Apple Calendar
+          </a>
+          <a class="button button-secondary" href="#instructions" data-setup-feed="https://karchensky.github.io/hockey_events/ics/golden-retrievers-summer-2025.ics"
+             aria-label="Set up Golden Retrievers - Summer 2025 in Google Calendar"><svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#calendar-days"></use></svg> Google / Android</a>
+        </div>
+      </li></ul>
+    </details>
+    </div>
 
-  <h2>Unsubscribe</h2>
-  <p><strong>Apple:</strong> Remove the subscribed calendar in Calendar settings.</p>
-  <p><strong>Android (Google Calendar):</strong> On the web, open Settings, select the subscribed calendar, and Remove/Unsubscribe. It will disappear from the app.</p>
+    <section id="instructions" class="instructions" aria-labelledby="instructions-title" tabindex="-1">
+      <div class="section-heading"><div><p class="eyebrow">Get connected</p><h2 id="instructions-title">Add your calendar</h2></div></div>
+      <p class="section-intro">Subscribe once for this season. Schedule changes will appear when your calendar refreshes.</p>
 
-  <h2>Contact</h2>
-  <p>Bryan Karchensky</p>
+      <div class="feed-picker" data-js-only hidden>
+        <label for="calendar-select">Team &amp; season</label>
+        <select id="calendar-select"><option value="https://karchensky.github.io/hockey_events/ics/golden-retrievers-fallwinter-202627.ics">Golden Retrievers - Fall/Winter 2026/27</option><option value="https://karchensky.github.io/hockey_events/ics/golden-retrievers-summer-2026.ics">Golden Retrievers - Summer 2026</option><option value="https://karchensky.github.io/hockey_events/ics/716-realty-group-summer-2026.ics">716 Realty Group - Summer 2026</option><option value="https://karchensky.github.io/hockey_events/ics/golden-retrievers-fallwinter-202526.ics">Golden Retrievers - Fall/Winter 2025/26</option><option value="https://karchensky.github.io/hockey_events/ics/audubon-north-fallwinter-202526.ics">Audubon North - Fall/Winter 2025/26</option><option value="https://karchensky.github.io/hockey_events/ics/716-realty-group-fallwinter-202526.ics">716 Realty Group - Fall/Winter 2025/26</option><option value="https://karchensky.github.io/hockey_events/ics/audubon-north-summer-2025.ics">Audubon North - Summer 2025</option><option value="https://karchensky.github.io/hockey_events/ics/golden-retrievers-summer-2025.ics">Golden Retrievers - Summer 2025</option></select>
+      </div>
+      <noscript><p>These steps use <strong>Golden Retrievers - Fall/Winter 2026/27</strong>. For another team, copy its Calendar feed link above and use that address instead.</p></noscript>
+      <div class="feed-field">
+        <label for="feed-url">Calendar subscription link</label>
+        <div class="copy-control">
+          <input id="feed-url" type="url" value="https://karchensky.github.io/hockey_events/ics/golden-retrievers-fallwinter-202627.ics" readonly spellcheck="false" aria-describedby="copy-status">
+          <button class="button button-copy" id="copy-feed" type="button" title="Copy calendar subscription link" data-js-only hidden><svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#copy"></use></svg><span>Copy link</span></button>
+        </div>
+        <p class="field-hint" id="copy-status" role="status" aria-live="polite">Select the full link to copy it manually.</p>
+      </div>
+
+      <div class="platform-tabs" aria-label="Choose your device" data-js-only hidden>
+        <button type="button" id="tab-iphone" data-platform="iphone">iPhone / iPad</button>
+        <button type="button" id="tab-android" data-platform="android">Android / Google</button>
+        <button type="button" id="tab-mac" data-platform="mac">Mac</button>
+      </div>
+
+      <section class="platform-panel" id="panel-iphone" aria-labelledby="iphone-title">
+        <h3 id="iphone-title">iPhone &amp; iPad</h3>
+        <p>Use Apple's Calendar app.</p>
+        <ol class="steps">
+          <li><div><strong>Open the subscription.</strong><p>Tap the button below. Allow your browser to open Calendar if asked.</p>
+            <a class="button button-primary guide-apple-link" href="webcal://karchensky.github.io/hockey_events/ics/golden-retrievers-fallwinter-202627.ics"><svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#calendar-plus"></use></svg> Subscribe in Apple Calendar</a></div></li>
+          <li><div><strong>Confirm the calendar.</strong><p>Choose <b>Subscribe</b> or follow the subscription prompt. Pick a name and color. Choose <b>iCloud</b> as the account to see it on your other Apple devices, then tap <b>Add</b> or <b>Done</b>.</p></div></li>
+          <li><div><strong>Make it visible.</strong><p>In Calendar, tap <b>Calendars</b> at the bottom and check your team's calendar.</p></div></li>
+        </ol>
+        <details class="inline-help"><summary>Button didn't open Calendar?</summary><p>Copy the subscription link above. In the Calendar app, tap <b>Calendars</b>, then <b>Add Calendar</b> and <b>Add Subscription Calendar</b>. Paste the link and tap <b>Find</b> (or <b>Subscribe</b> on older versions). Finish with <b>Done</b> or <b>Add</b>.</p></details>
+        <p class="support-link"><a href="https://support.apple.com/en-us/102301" target="_blank" rel="noopener noreferrer">Apple's subscription instructions <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#external-link"></use></svg></a></p>
+      </section>
+
+      <section class="platform-panel" id="panel-android" aria-labelledby="android-title">
+        <h3 id="android-title">Android &amp; Google Calendar</h3>
+        <p class="important-note">Start on a computer. The Google Calendar phone app cannot add a calendar from a URL.</p>
+        <ol class="steps">
+          <li><div><strong>Copy your calendar link.</strong><p>Choose the correct team and season above, then copy the full subscription link.</p></div></li>
+          <li><div><strong>Open Google Calendar on a computer.</strong><p>Go to <a href="https://calendar.google.com/" target="_blank" rel="noopener noreferrer">calendar.google.com <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#external-link"></use></svg></a> and sign in with the same Google account you use on your phone.</p></div></li>
+          <li><div><strong>Add it by URL.</strong><p>Next to <b>Other calendars</b> on the left, click <b>+</b>, then <b>From URL</b>. Paste the subscription link and click <b>Add calendar</b>.</p></div></li>
+          <li><div><strong>Show it on your phone.</strong><p>Open the Google Calendar app. Tap the menu at the top left, scroll to your account, and check the team calendar.</p></div></li>
+          <li><div><strong>Check sync if it's missing.</strong><p>In the app, open <b>Menu &gt; Settings</b>, select the team calendar (tap <b>Show more</b> if needed), and turn <b>Sync</b> on. Then return to your calendar and refresh.</p></div></li>
+        </ol>
+        <details class="inline-help"><summary>Only have your phone?</summary><p>You can try opening Google Calendar in your browser and requesting <b>Desktop site</b> from the browser menu. If the full calendar settings do not appear, finish setup on a computer. Downloading an .ics file is a one-time import, not a subscription.</p></details>
+        <p class="support-link"><a href="https://support.google.com/calendar/answer/37100?hl=en" target="_blank" rel="noopener noreferrer">Google's subscription instructions <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#external-link"></use></svg></a></p>
+      </section>
+
+      <section class="platform-panel" id="panel-mac" aria-labelledby="mac-title">
+        <h3 id="mac-title">Mac</h3>
+        <ol class="steps">
+          <li><div><strong>Copy the subscription link above.</strong><p>Check the team and season before copying.</p></div></li>
+          <li><div><strong>Open Apple's Calendar app.</strong><p>Choose <b>File &gt; New Calendar Subscription</b>. Paste the link and click <b>Subscribe</b>.</p></div></li>
+          <li><div><strong>Save your subscription.</strong><p>Choose a name, color, and refresh interval. Set <b>Location</b> to <b>iCloud</b> to use the calendar across your Apple devices, then click <b>OK</b>.</p></div></li>
+        </ol>
+        <p class="support-link"><a href="https://support.apple.com/en-us/102301" target="_blank" rel="noopener noreferrer">Apple's subscription instructions <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#external-link"></use></svg></a></p>
+      </section>
+    </section>
+
+    <section class="help-section" aria-labelledby="help-title">
+      <h2 id="help-title">A few helpful details</h2>
+      <details class="faq"><summary>When do schedule changes appear?</summary><p>Active feeds are checked twice daily. Apple, Google, and other calendar providers refresh subscriptions on their own schedules, so a change may take time to appear. For a last-minute change, check the league schedule linked beside your team.</p><p>Game times use <strong>America/New_York</strong>. Your calendar app may display them in your device's local time zone.</p></details>
+      <details class="faq"><summary>I downloaded a file or see duplicate games.</summary><p>An .ics download is a snapshot. It will not receive schedule updates. Remove the imported games or the calendar you imported them into, then subscribe using the steps above. If you subscribed twice, remove the extra subscription.</p></details>
+      <details class="faq"><summary>Do I need to subscribe again each season?</summary><p>Yes. Each team and season has a separate calendar link. Add the new season's subscription here; your old subscription keeps that season's games. You can keep or remove old calendars.</p></details>
+      <details class="faq"><summary>How do I unsubscribe?</summary><p><strong>iPhone / iPad:</strong> In Calendar, tap <b>Calendars</b>, tap the information button beside the team calendar, and choose <b>Unsubscribe</b>.</p><p><strong>Mac:</strong> In Calendar's sidebar, Control-click the subscribed calendar and choose <b>Unsubscribe</b>.</p><p><strong>Google Calendar:</strong> On a computer, open <b>Settings</b>, select the team under <b>Settings for other calendars</b>, then choose <b>Remove calendar &gt; Unsubscribe</b>.</p></details>
+      <details class="faq"><summary>Can I use Outlook?</summary><p>In Outlook on the web, open Calendar, choose <b>Add calendar &gt; Subscribe from web</b>, and paste the subscription link above. Name the calendar and save it.</p></details>
+    </section>
+  </main>
+  <footer class="site-footer"><div><span>Hockey Events</span><span>Maintained by Bryan Karchensky</span><a href="https://github.com/karchensky/hockey_events" target="_blank" rel="noopener noreferrer">Project on GitHub <svg class="icon" width="20" height="20" aria-hidden="true"><use href="assets/icons.svg#external-link"></use></svg></a></div></footer>
 </body>
 </html>

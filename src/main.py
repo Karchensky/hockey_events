@@ -11,6 +11,7 @@ from src.config import load_config
 from src.scrapers.bond_sports import BondSportsScraper
 from src.scrapers.erie_metro import ErieMetroScraper
 from src.scrapers.rinks_harborcenter import HarborcenterScraper
+from src.site import render_index
 from src.utils.events import Event
 from src.utils.ics import build_ics
 
@@ -58,8 +59,8 @@ def build_team_feeds() -> None:
 
     sorted_seasons = sorted(config.seasons, key=season_sort_key, reverse=True)
 
-    # Track link targets for index (name+season slugs)
-    season_sections: List[str] = []
+    season_sections: List[dict] = []
+    pending_feeds: dict[Path, bytes] = {}
 
     for season in sorted_seasons:
         season_slug = slugify(season.name)
@@ -73,6 +74,11 @@ def build_team_feeds() -> None:
             if team.active and season.active:
                 # Generate fresh ICS for active teams
                 events: List[Event] = collect_events(team.urls, timezone, team_name=team.name)
+                if not events:
+                    raise RuntimeError(
+                        f"No games returned for {team.name} ({season.name}); "
+                        "keeping existing feeds and stopping publication."
+                    )
                 # Dedupe with source IDs when available so the same game can move from
                 # "schedule" to "scores" without creating a second calendar event.
                 unique_map = {}
@@ -96,49 +102,32 @@ def build_team_feeds() -> None:
                     if key not in unique_map:
                         unique_map[key] = e
                 unique_events = sorted(unique_map.values(), key=lambda e: e.start)
-                ics_bytes = build_ics(unique_events, cal_name=team.name, tz_name=timezone)
-                (docs / preferred_filename).write_bytes(ics_bytes)
+                ics_bytes = build_ics(
+                    unique_events, cal_name=f"{team.name} - {season.name}", tz_name=timezone
+                )
+                pending_feeds[docs / preferred_filename] = ics_bytes
 
-            team_links.append(f'<li><a href="ics/{preferred_filename}">{team.name}</a></li>')
+            team_links.append({
+                "name": team.name,
+                "filename": preferred_filename,
+                "source_url": team.urls[0] if team.urls else "",
+            })
         
         # Always add season section if there are teams
         if team_links:
-            season_sections.append(f"<h2>{season.name}</h2>\n<ul>\n{chr(10).join(team_links)}\n</ul>")
+            season_sections.append({
+                "name": season.name,
+                "active": season.active,
+                "teams": team_links,
+            })
+
+    # Finish all scrapes before replacing any published feed.
+    for path, content in pending_feeds.items():
+        path.write_bytes(content)
 
     index = Path("docs/index.html")
     index.write_text(
-        f"""
-<!DOCTYPE html>
-<html lang=\"en\">
-<head>
-  <meta charset=\"utf-8\" />
-  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
-  <title>Team Calendar Subscriptions</title>
-  <style>
-    body {{ font-family: 'Borda', 'Borda Regular', sans-serif; line-height: 1.5; margin: 24px; }}
-    h1 {{ margin-bottom: 8px; }}
-    h2 {{ margin-top: 24px; }}
-    ul {{ padding-left: 20px; }}
-    code {{ background: #f4f4f4; padding: 2px 4px; border-radius: 4px; }}
-  </style>
-</head>
-<body>
-  <h1>Team Calendar Subscriptions</h1>
-  {''.join(season_sections)}
-
-  <h2>Subscribe</h2>
-  <p><strong>Apple (iPhone/iPad):</strong> Tap a team link above and choose Subscribe. Or go to Settings → Calendar → Accounts → Add Subscribed Calendar and paste the URL.</p>
-  <p><strong>Android (Google Calendar):</strong> Use Google Calendar on the web: Other calendars → From URL → paste the team URL → Add. Then ensure it’s visible and set to Sync in the app. Tapping the link on Android typically downloads a file (one-time import) and won’t auto-update.</p>
-
-  <h2>Unsubscribe</h2>
-  <p><strong>Apple:</strong> Remove the subscribed calendar in Calendar settings.</p>
-  <p><strong>Android (Google Calendar):</strong> On the web, open Settings, select the subscribed calendar, and Remove/Unsubscribe. It will disappear from the app.</p>
-
-  <h2>Contact</h2>
-  <p>Bryan Karchensky</p>
-</body>
-</html>
-""".strip(),
+        render_index(season_sections, timezone),
         encoding="utf-8",
     )
 
