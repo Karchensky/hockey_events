@@ -10,6 +10,14 @@ seasons:
         name: Golden Retrievers
         urls:
           - https://www.rinksatharborcenter.com/stats#/1367/team/717325/schedule
+      - id: audubon-north-fallwinter-202627
+        name: Audubon North
+        urls:
+          - https://www.eriemetrosports.com/schedule/team_instance/10632670?subseason=966839
+      - id: 716-realty-group-fallwinter-202627
+        name: 716 Realty Group
+        urls:
+          - https://www.eriemetrosports.com/schedule/team_instance/10632677?subseason=966839
   - id: summer-2026
     name: Summer 2026
     start: 2026-06-01

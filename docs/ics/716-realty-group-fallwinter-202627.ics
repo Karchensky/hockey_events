@@ -1,0 +1,19 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Hockey Events//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:716 Realty Group - Fall/Winter 2026/27
+X-WR-TIMEZONE:America/New_York
+BEGIN:VEVENT
+SUMMARY:716 Realty Group vs. M&M Forwarding (0-0)
+DTSTART:20260923T012000Z
+DTEND:20260923T023500Z
+DTSTAMP:20260919T172328Z
+UID:evt_4481c19f8f86ca34f4ba6849ae7b769e457a0997
+DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
+ am_instance/10632677?subseason=966839\nStatus: 9:20 PM EDT
+LOCATION:Buffalo State
+URL:https://www.eriemetrosports.com/game/show/45896116?subseason=966839
+END:VEVENT
+END:VCALENDAR
