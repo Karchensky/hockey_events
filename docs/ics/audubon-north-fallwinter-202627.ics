@@ -9,7 +9,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Hammers (0-0)
 DTSTART:20260924T012000Z
 DTEND:20260924T023500Z
-DTSTAMP:20261002T193607Z
+DTSTAMP:20261003T084114Z
 UID:evt_40055a980c49925eb33a3a90e828ddca067afeb7
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10632670?subseason=966839\nStatus: 9:20 PM EDT
@@ -17,21 +17,10 @@ LOCATION:Buffalo State
 URL:https://www.eriemetrosports.com/game/show/45896608?subseason=966839
 END:VEVENT
 BEGIN:VEVENT
-SUMMARY:Audubon North vs. 716 Realty Group (0-0)
-DTSTART:20261003T012000Z
-DTEND:20261003T023500Z
-DTSTAMP:20261002T193607Z
-UID:evt_6f3ca42714f0e0ebe707245c0c11ecb456c143c8
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10632670?subseason=966839\nStatus: 9:20 PM EDT
-LOCATION:Buffalo State
-URL:https://www.eriemetrosports.com/game/show/45905225?subseason=966839
-END:VEVENT
-BEGIN:VEVENT
 SUMMARY:Audubon North vs. Metro Stars (0-0)
 DTSTART:20261008T012000Z
 DTEND:20261008T023500Z
-DTSTAMP:20261002T193607Z
+DTSTAMP:20261003T084114Z
 UID:evt_86460630982f527a9446abe17e6d8259efcbfa93
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10632670?subseason=966839\nStatus: 9:20 PM EDT
