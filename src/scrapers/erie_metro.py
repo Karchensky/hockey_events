@@ -4,6 +4,7 @@ from datetime import datetime
 from typing import List, Optional
 import random
 import asyncio
+import time
 import warnings
 import logging
 import re
@@ -26,6 +27,9 @@ warnings.filterwarnings('ignore', category=RuntimeWarning, module='asyncio')
 SCORE_RE = re.compile(r"\b\d+\s*-\s*\d+\b")
 SEASON_RANGE_RE = re.compile(r"\b(20\d{2})\s*[-/]\s*(\d{2,4})\b")
 OG_TITLE_TIME_RE = re.compile(r"-\s*(.+)$")
+RECORD_SUFFIX_RE = re.compile(r"\(\d+(?:-\d+)+\)\s*$")
+FETCH_ATTEMPTS = 3
+FETCH_BACKOFF_SECONDS = 10
 MAC_HEADERS = {
     "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
@@ -161,46 +165,30 @@ class ErieMetroScraper(Scraper):
         except Exception:
             return None
 
-    def scrape(self, url: str, timezone: str) -> List[Event]:
-        """Main scrape method that uses Mac user agent (working) with browser automation fallback"""
-        # Strategy 1: Mac user agent (most reliable)
-        try:
-            resp = requests.get(url, timeout=30, headers=MAC_HEADERS)
-            resp.raise_for_status()
-            soup = BeautifulSoup(resp.text, "html.parser")
-        except Exception as e:
-            print(f"Mac user agent failed, trying browser automation: {e}")
-            
-            # Strategy 2: Browser automation fallback
+    def _fetch_page(self, url: str) -> str:
+        last_error: Optional[Exception] = None
+        for attempt in range(FETCH_ATTEMPTS):
+            if attempt:
+                time.sleep(FETCH_BACKOFF_SECONDS * attempt)
             try:
-                content = asyncio.run(self._scrape_with_browser(url))
-                soup = BeautifulSoup(content, "html.parser")
-            except Exception as e2:
-                print(f"Browser automation failed, trying mobile user agent: {e2}")
-                
-                # Strategy 3: Mobile user agent fallback
-                try:
-                    resp = requests.get(url, timeout=30, headers={
-                        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1',
-                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-                        'Accept-Language': 'en-US,en;q=0.5',
-                        'Accept-Encoding': 'gzip, deflate',
-                        'Connection': 'keep-alive',
-                    })
-                    resp.raise_for_status()
-                    soup = BeautifulSoup(resp.text, "html.parser")
-                except Exception as e3:
-                    # If all strategies fail, return placeholder event
-                    print(f"All scraping strategies failed for Erie Metro. Mac UA: {e}, Browser: {e2}, Mobile UA: {e3}")
-                    return [Event(
-                        summary=f"{self.team_name} - Schedule Unavailable",
-                        start=datetime.now(pytz.timezone(timezone)),
-                        end=datetime.now(pytz.timezone(timezone)),
-                        timezone=timezone,
-                        location="Erie Metro Sports",
-                        description="Unable to retrieve schedule due to bot protection. Please check the website directly.",
-                        source_url=url,
-                    )]
+                resp = requests.get(url, timeout=30, headers=MAC_HEADERS)
+                resp.raise_for_status()
+                return resp.text
+            except Exception as e:
+                last_error = e
+                print(f"Erie Metro request {attempt + 1}/{FETCH_ATTEMPTS} failed: {e}")
+
+        try:
+            return asyncio.run(self._scrape_with_browser(url))
+        except Exception as e:
+            # Raise rather than publish a placeholder: the build keeps the last good
+            # feed when a scrape fails, and a placeholder would replace every game.
+            raise RuntimeError(
+                f"Could not load Erie Metro schedule {url}. Requests: {last_error}. Browser: {e}"
+            ) from e
+
+    def scrape(self, url: str, timezone: str) -> List[Event]:
+        soup = BeautifulSoup(self._fetch_page(url), "html.parser")
 
         events: List[Event] = []
 
@@ -285,8 +273,14 @@ class ErieMetroScraper(Scraper):
                         continue
 
             opponent_cell = cells[opponent_idx] if opponent_idx >= 0 else "Opponent"
-            # Opponent cell often like '@ Ham Sub Club' or 'Realty Group'
-            opponent = opponent_cell.replace("@", "").strip()
+            # Opponent cell often like '@ Ham Sub Club (3-1)'; the bracket is the
+            # opponent's record, not a score, so prefer the team link's text.
+            opponent_tag = cell_tags[opponent_idx] if 0 <= opponent_idx < len(cell_tags) else None
+            opponent_link = opponent_tag.find("a", class_="teamName") if opponent_tag else None
+            if opponent_link and opponent_link.get_text(strip=True):
+                opponent = opponent_link.get_text(" ", strip=True)
+            else:
+                opponent = RECORD_SUFFIX_RE.sub("", opponent_cell.replace("@", "")).strip()
             # Compose summary with team name if available
             if self.team_name:
                 summary = f"{self.team_name} vs. {opponent}"

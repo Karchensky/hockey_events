@@ -5,6 +5,7 @@ import unittest
 from unittest.mock import patch
 
 import pytz
+import requests
 
 from src.scrapers.erie_metro import ErieMetroScraper
 from src.scrapers.rinks_harborcenter import HarborcenterScraper
@@ -188,8 +189,47 @@ class CalendarRetentionTests(unittest.TestCase):
         self.assertIn("Result: W 5-3", completed.description or "")
 
         self.assertEqual(upcoming.start.year, 2026)
-        self.assertIn("RCR Yachts", upcoming.summary)
+        # "(18-8)" is RCR Yachts' record, not a score.
+        self.assertEqual(upcoming.summary, "Audubon North vs. RCR Yachts")
         self.assertTrue(upcoming.external_id.endswith("45387197?subseason=952202"))
+
+    def test_erie_metro_failure_raises_instead_of_publishing_placeholder(self) -> None:
+        scraper = ErieMetroScraper(team_name="716 Realty Group")
+        handshake = requests.exceptions.SSLError("sslv3 alert handshake failure")
+
+        with patch("src.scrapers.erie_metro.requests.get", side_effect=handshake) as get, patch(
+            "src.scrapers.erie_metro.time.sleep"
+        ), patch.object(
+            ErieMetroScraper, "_scrape_with_browser", side_effect=Exception("ERR_SSL_VERSION_OR_CIPHER_MISMATCH")
+        ), self.assertRaisesRegex(RuntimeError, "Could not load Erie Metro schedule"):
+            scraper.scrape(
+                "https://www.eriemetrosports.com/schedule/team_instance/10632677?subseason=966839",
+                "America/New_York",
+            )
+
+        self.assertEqual(get.call_count, 3)
+
+    def test_erie_metro_retries_a_transient_failure(self) -> None:
+        scraper = ErieMetroScraper(team_name="Audubon North")
+        responses = [requests.exceptions.SSLError("handshake failure"), FakeResponse(TEAM_PAGE_HTML)]
+
+        def fake_get(url: str, *args, **kwargs):
+            if "game/show/" in url:
+                return FakeResponse(GAME_PAGE_HTML)
+            result = responses.pop(0)
+            if isinstance(result, Exception):
+                raise result
+            return result
+
+        with patch("src.scrapers.erie_metro.requests.get", side_effect=fake_get), patch(
+            "src.scrapers.erie_metro.time.sleep"
+        ):
+            events = scraper.scrape(
+                "https://www.eriemetrosports.com/schedule/team_instance/10300893?subseason=952202",
+                "America/New_York",
+            )
+
+        self.assertEqual(len(events), 2)
 
     def test_harborcenter_parses_schedule_and_scores_rows(self) -> None:
         scraper = HarborcenterScraper(team_name="Golden Retrievers")
