@@ -9,7 +9,7 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. M&M Forwarding (W 6-4)
 DTSTART:20260923T012000Z
 DTEND:20260923T023500Z
-DTSTAMP:20261030T091228Z
+DTSTAMP:20261030T194529Z
 UID:evt_4481c19f8f86ca34f4ba6849ae7b769e457a0997
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10632677?subseason=966839\nResult: W 6-4\nStatus: FINAL
@@ -20,7 +20,7 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. RCR Yachts (L 2-5)
 DTSTART:20261006T015000Z
 DTEND:20261006T030500Z
-DTSTAMP:20261030T091228Z
+DTSTAMP:20261030T194529Z
 UID:evt_b76f01466485edff4a87fa5d09c8ef64c5217bf2
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10632677?subseason=966839\nResult: L 2-5\nStatus: FINAL
@@ -31,7 +31,7 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. Hammers
 DTSTART:20261017T012000Z
 DTEND:20261017T023500Z
-DTSTAMP:20261030T091228Z
+DTSTAMP:20261030T194529Z
 UID:evt_6fd1bd481c87e6f62a3c9b26d47accc7e27559e0
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10632677?subseason=966839\nStatus: 9:20 PM EDT
@@ -42,7 +42,7 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. RCR Yachts (L 2-8)
 DTSTART:20261020T015000Z
 DTEND:20261020T030500Z
-DTSTAMP:20261030T091228Z
+DTSTAMP:20261030T194529Z
 UID:evt_ba52ba900410b3c0b57113652458879137bcc7dd
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10632677?subseason=966839\nResult: L 2-8\nStatus: FINAL
@@ -53,7 +53,7 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. M&M Forwarding
 DTSTART:20261029T012000Z
 DTEND:20261029T023500Z
-DTSTAMP:20261030T091228Z
+DTSTAMP:20261030T194529Z
 UID:evt_9dacb51ec9068f688efeb92d78c1b0d05616fd05
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10632677?subseason=966839\nStatus: 9:20 PM EDT
@@ -64,7 +64,7 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. Mitchell's
 DTSTART:20261103T022000Z
 DTEND:20261103T033500Z
-DTSTAMP:20261030T091228Z
+DTSTAMP:20261030T194529Z
 UID:evt_ab67b2c49b64a3cb48909f1e0c2028ba8d6113d5
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10632677?subseason=966839\nStatus: 9:20 PM EST
@@ -75,22 +75,11 @@ BEGIN:VEVENT
 SUMMARY:716 Realty Group vs. Audubon
 DTSTART:20261111T025000Z
 DTEND:20261111T040500Z
-DTSTAMP:20261030T091228Z
+DTSTAMP:20261030T194529Z
 UID:evt_a4daf7e3619b06f6e881466a221d6791e3ae2d94
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10632677?subseason=966839\nStatus: 9:50 PM EST
 LOCATION:Riverside Rink
 URL:https://www.eriemetrosports.com/game/show/46012559?subseason=966839
-END:VEVENT
-BEGIN:VEVENT
-SUMMARY:716 Realty Group vs. Metro Stars
-DTSTART:20261112T025000Z
-DTEND:20261112T040500Z
-DTSTAMP:20261030T091228Z
-UID:evt_18f0b0b909b724785201b6136a8ca2577281129a
-DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
- am_instance/10632677?subseason=966839\nStatus: 9:50 PM EST
-LOCATION:Riverside Rink
-URL:https://www.eriemetrosports.com/game/show/46012691?subseason=966839
 END:VEVENT
 END:VCALENDAR
