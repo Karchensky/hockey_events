@@ -9,7 +9,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Hammers (L 0-4)
 DTSTART:20260924T012000Z
 DTEND:20260924T023500Z
-DTSTAMP:20261106T203818Z
+DTSTAMP:20261107T092237Z
 UID:evt_40055a980c49925eb33a3a90e828ddca067afeb7
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10632670?subseason=966839\nResult: L 0-4\nStatus: FINAL
@@ -20,7 +20,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. RCR Yachts (W 7-5)
 DTSTART:20261014T012000Z
 DTEND:20261014T023500Z
-DTSTAMP:20261106T203818Z
+DTSTAMP:20261107T092237Z
 UID:evt_035b8e49cb062c93fbf8fe2acbb2254fdc98db51
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10632670?subseason=966839\nResult: W 7-5\nStatus: FINAL
@@ -31,7 +31,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Hammers (W 8-5)
 DTSTART:20261021T012000Z
 DTEND:20261021T023500Z
-DTSTAMP:20261106T203818Z
+DTSTAMP:20261107T092237Z
 UID:evt_d8df5414701a4e8685ae686596897da02d0b23c8
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10632670?subseason=966839\nResult: W 8-5\nStatus: FINAL
@@ -42,7 +42,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. RCR Yachts (W 9-0)
 DTSTART:20261027T012000Z
 DTEND:20261027T023500Z
-DTSTAMP:20261106T203818Z
+DTSTAMP:20261107T092237Z
 UID:evt_e1cf3be87062f742abec3d4b4d1f3cd44df5049b
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10632670?subseason=966839\nResult: W 9-0\nStatus: FINAL
@@ -53,7 +53,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Metro Stars (L 1-6)
 DTSTART:20261030T020500Z
 DTEND:20261030T032000Z
-DTSTAMP:20261106T203818Z
+DTSTAMP:20261107T092237Z
 UID:evt_25c2921cf5194a2645cd91abf02ec9e46e70a2aa
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10632670?subseason=966839\nResult: L 1-6\nStatus: FINAL
@@ -64,7 +64,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. M&M Forwarding
 DTSTART:20261104T022000Z
 DTEND:20261104T033500Z
-DTSTAMP:20261106T203818Z
+DTSTAMP:20261107T092237Z
 UID:evt_ce95e188461d7f8586aab684def66cfefa278dbb
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10632670?subseason=966839\nStatus: 9:20 PM EST
@@ -75,7 +75,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. 716 Realty Group
 DTSTART:20261111T025000Z
 DTEND:20261111T040500Z
-DTSTAMP:20261106T203818Z
+DTSTAMP:20261107T092237Z
 UID:evt_a4daf7e3619b06f6e881466a221d6791e3ae2d94
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10632670?subseason=966839\nStatus: 9:50 PM EST
@@ -86,7 +86,7 @@ BEGIN:VEVENT
 SUMMARY:Audubon North vs. Hammers
 DTSTART:20261118T022000Z
 DTEND:20261118T033500Z
-DTSTAMP:20261106T203818Z
+DTSTAMP:20261107T092237Z
 UID:evt_3e3140677636a02aa47dc005e6da422f86d03e63
 DESCRIPTION:Auto-imported from https://www.eriemetrosports.com/schedule/te
  am_instance/10632670?subseason=966839\nStatus: 9:20 PM EST
